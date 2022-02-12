@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextBtnAction(_ sender: Any) {
-        
+
     }
     
 }
