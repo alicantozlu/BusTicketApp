@@ -28,10 +28,14 @@ class ViewController: UIViewController {
     
     @IBAction func goToStartBtnAction(_ sender: Any) {
         
+        
+        
     }
     
     @IBAction func nextBtnAction(_ sender: Any) {
 
+        
+        
     }
     
 }
