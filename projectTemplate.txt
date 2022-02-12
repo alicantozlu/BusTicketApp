@@ -1,0 +1,5 @@
+#001f5b  - dark blue
+
+#ff0000 - red
+
+#dbf8ff - background color
