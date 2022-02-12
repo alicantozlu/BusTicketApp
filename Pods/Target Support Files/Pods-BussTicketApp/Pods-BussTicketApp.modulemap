@@ -1,0 +1,6 @@
+framework module Pods_BussTicketApp {
+  umbrella header "Pods-BussTicketApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

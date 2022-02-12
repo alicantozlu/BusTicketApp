@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */; };
 		C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000027B6B26000FA6623 /* SceneDelegate.swift */; };
 		C687000327B6B26000FA6623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000227B6B26000FA6623 /* ViewController.swift */; };
 		C687000627B6B26000FA6623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000427B6B26000FA6623 /* Main.storyboard */; };
 		C687000927B6B26000FA6623 /* BussTicketApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C687000727B6B26000FA6623 /* BussTicketApp.xcdatamodeld */; };
 		C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C687000A27B6B26200FA6623 /* Assets.xcassets */; };
 		C687000E27B6B26200FA6623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000C27B6B26200FA6623 /* LaunchScreen.storyboard */; };
+		C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */; };
+		C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */; };
 		C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687FFFE27B6B26000FA6623 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BussTicketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4D06DA2147DAC863FA1C71 /* Pods-BussTicketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BussTicketApp.debug.xcconfig"; path = "Target Support Files/Pods-BussTicketApp/Pods-BussTicketApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BBE26A85B39A422507868C36 /* Pods-BussTicketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BussTicketApp.release.xcconfig"; path = "Target Support Files/Pods-BussTicketApp/Pods-BussTicketApp.release.xcconfig"; sourceTree = "<group>"; };
 		C687000027B6B26000FA6623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C687000227B6B26000FA6623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C687000527B6B26000FA6623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		C687000A27B6B26200FA6623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C687000D27B6B26200FA6623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C687000F27B6B26200FA6623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPagesModel.swift; sourceTree = "<group>"; };
 		C687FFFB27B6B26000FA6623 /* BussTicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BussTicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C687FFFE27B6B26000FA6623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,17 +41,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49EC82563B0A5E85C5AA38E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A4D06DA2147DAC863FA1C71 /* Pods-BussTicketApp.debug.xcconfig */,
+				BBE26A85B39A422507868C36 /* Pods-BussTicketApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C687001527B6D9DA00FA6623 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C687001627B6D9E200FA6623 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C687FFF227B6B26000FA6623 = {
 			isa = PBXGroup;
 			children = (
 				C687FFFD27B6B26000FA6623 /* BussTicketApp */,
 				C687FFFC27B6B26000FA6623 /* Products */,
+				49EC82563B0A5E85C5AA38E3 /* Pods */,
+				EEEA88CD37FA534F14D8E86F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +94,8 @@
 		C687FFFD27B6B26000FA6623 /* BussTicketApp */ = {
 			isa = PBXGroup;
 			children = (
+				C687001627B6D9E200FA6623 /* Cells */,
+				C687001527B6D9DA00FA6623 /* Models */,
 				C687FFFE27B6B26000FA6623 /* AppDelegate.swift */,
 				C687000027B6B26000FA6623 /* SceneDelegate.swift */,
 				C687000227B6B26000FA6623 /* ViewController.swift */,
@@ -70,6 +108,14 @@
 			path = BussTicketApp;
 			sourceTree = "<group>";
 		};
+		EEEA88CD37FA534F14D8E86F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C687001227B6B26200FA6623 /* Build configuration list for PBXNativeTarget "BussTicketApp" */;
 			buildPhases = (
+				61D02FFECE68C026B830AEBE /* [CP] Check Pods Manifest.lock */,
 				C687FFF727B6B26000FA6623 /* Sources */,
 				C687FFF827B6B26000FA6623 /* Frameworks */,
 				C687FFF927B6B26000FA6623 /* Resources */,
+				1766AF6846D16F99780D34F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +184,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1766AF6846D16F99780D34F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BussTicketApp/Pods-BussTicketApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BussTicketApp/Pods-BussTicketApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BussTicketApp/Pods-BussTicketApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61D02FFECE68C026B830AEBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BussTicketApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C687FFF727B6B26000FA6623 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +233,8 @@
 			files = (
 				C687000927B6B26000FA6623 /* BussTicketApp.xcdatamodeld in Sources */,
 				C687000327B6B26000FA6623 /* ViewController.swift in Sources */,
+				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
+				C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */,
 				C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */,
 				C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,6 +380,7 @@
 		};
 		C687001327B6B26200FA6623 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4D06DA2147DAC863FA1C71 /* Pods-BussTicketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +408,7 @@
 		};
 		C687001427B6B26200FA6623 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE26A85B39A422507868C36 /* Pods-BussTicketApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
