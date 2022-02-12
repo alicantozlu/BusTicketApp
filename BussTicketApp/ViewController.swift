@@ -10,11 +10,33 @@ import Lottie
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var goToStartBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var timerAnimation: AnimationView!
     
     var slides = [PageModel]()
+    
+    var currentPage = 0 {
+        didSet{
+            pageController.currentPage = currentPage
+            
+            if (currentPage == 0){
+                goToStartBtn.isHidden = false
+                goToStartBtn.setTitle("Skip", for: .normal)
+            } else if (currentPage == slides.count-1){
+                nextBtn.setTitle("Get Started", for: .normal)
+                nextBtn.backgroundColor = .cyan
+                
+                goToStartBtn.isHidden = false
+                goToStartBtn.setTitle("Go To Start", for: .normal)
+            } else {
+                goToStartBtn.isHidden = true
+                goToStartBtn.setTitle("none", for: .normal)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,21 +48,32 @@ class ViewController: UIViewController {
         slides = [page1, page2, page3, page4]
     }
     
-    @IBAction func goToStartBtnAction(_ sender: Any) {
-        
-        
-        
-    }
     
     @IBAction func nextBtnAction(_ sender: Any) {
-
-        
-        
+        if(currentPage == slides.count-1){
+            // navigate to the next page
+            print("Go To Next Page")
+        } else if(currentPage != slides.count-1){
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
     
+    @IBAction func goToStartBtnAction(_ sender: Any) {
+        if(currentPage == 0){
+            // Get Started a basildiginde gecilecek ekran calisacak
+            print("Go Next Page")
+        } else if(currentPage == slides.count-1){
+            nextBtn.setTitle("Next", for: .normal)
+            currentPage = 0
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
     }
@@ -49,6 +82,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onboardingCellIdentifier", for: indexPath) as! OnboardingCollectionViewCell
         cell.setup(slide: slides[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
     }
     
 }

@@ -22,27 +22,15 @@
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.12156862745098039" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOm-b5-nAW">
-                                <rect key="frame" x="289" y="782" width="110" height="50"/>
+                                <rect key="frame" x="269" y="782" width="130" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KoY-fs-rLp"/>
-                                    <constraint firstAttribute="width" constant="110" id="MKG-zj-W8H"/>
+                                    <constraint firstAttribute="width" constant="130" id="MKG-zj-W8H"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="nextBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi0-tq-vrY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAx-0U-JV8">
-                                <rect key="frame" x="152" y="782" width="110" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="ILv-ek-AP5"/>
-                                    <constraint firstAttribute="height" constant="50" id="ndp-ph-rgD"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
-                                <connections>
-                                    <action selector="goToStartBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C2t-lT-uoH"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OBM-ND-UpD">
@@ -126,20 +114,33 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tMg-ye-CTj"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G7-i4-mkd">
+                                <rect key="frame" x="132" y="782" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="F88-EK-jno"/>
+                                    <constraint firstAttribute="height" constant="50" id="kDW-Wl-tSE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <connections>
+                                    <action selector="goToStartBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jlp-th-qzc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FUR-I8-V2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RUf-PI-6GS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5G7-i4-mkd" secondAttribute="bottom" constant="30" id="WEc-SO-HoL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DOm-b5-nAW" secondAttribute="bottom" constant="30" id="d5r-5S-3Hn"/>
-                            <constraint firstItem="MAx-0U-JV8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhX-1W-iZa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FUR-I8-V2d" secondAttribute="bottom" constant="42" id="izw-wT-kHO"/>
+                            <constraint firstItem="5G7-i4-mkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmm-QY-T5H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DOm-b5-nAW" secondAttribute="trailing" constant="15" id="rZc-oP-5Zc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MAx-0U-JV8" secondAttribute="bottom" constant="30" id="vB4-gD-8pJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goToStartBtn" destination="MAx-0U-JV8" id="vQi-PX-vyv"/>
+                        <outlet property="collectionView" destination="OBM-ND-UpD" id="xoj-iU-fN9"/>
+                        <outlet property="goToStartBtn" destination="5G7-i4-mkd" id="Pt4-4Q-g1x"/>
                         <outlet property="nextBtn" destination="DOm-b5-nAW" id="NfF-gW-l3L"/>
                         <outlet property="pageController" destination="FUR-I8-V2d" id="flI-kn-2pd"/>
                     </connections>
