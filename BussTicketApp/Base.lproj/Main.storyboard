@@ -23,12 +23,14 @@
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOm-b5-nAW">
                                 <rect key="frame" x="269" y="782" width="130" height="50"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KoY-fs-rLp"/>
                                     <constraint firstAttribute="width" constant="130" id="MKG-zj-W8H"/>
                                 </constraints>
+                                <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule"/>
                                 <connections>
                                     <action selector="nextBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi0-tq-vrY"/>
                                 </connections>
@@ -120,6 +122,7 @@
                                     <constraint firstAttribute="width" constant="150" id="F88-EK-jno"/>
                                     <constraint firstAttribute="height" constant="50" id="kDW-Wl-tSE"/>
                                 </constraints>
+                                <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                                 <connections>

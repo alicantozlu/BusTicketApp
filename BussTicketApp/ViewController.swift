@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var goToStartBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var timerAnimation: AnimationView!
     
     var slides = [PageModel]()
     
@@ -25,13 +24,23 @@ class ViewController: UIViewController {
             if (currentPage == 0){
                 goToStartBtn.isHidden = false
                 goToStartBtn.setTitle("Skip", for: .normal)
+                
+                nextBtn.setTitleColor(UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1), for: .normal)
+                nextBtn.backgroundColor = UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1)
+                
             } else if (currentPage == slides.count-1){
                 nextBtn.setTitle("Get Started", for: .normal)
-                nextBtn.backgroundColor = .cyan
+                nextBtn.backgroundColor  = UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1)
+                nextBtn.setTitleColor(UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1), for: .normal)
                 
                 goToStartBtn.isHidden = false
-                goToStartBtn.setTitle("Go To Start", for: .normal)
+                goToStartBtn.setTitle("⏎", for: .normal)
+                
             } else {
+                nextBtn.setTitle("Next", for: .normal)
+                nextBtn.backgroundColor = UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1)
+                nextBtn.setTitleColor(UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1), for: .normal)
+                
                 goToStartBtn.isHidden = true
                 goToStartBtn.setTitle("none", for: .normal)
             }
@@ -43,9 +52,11 @@ class ViewController: UIViewController {
         
         let page1 = PageModel(title: "To Bus Ticket App!", description: "We are happy to see you.", animationName: "wellcome")
         let page2 = PageModel(title: "Safe & Easy Payment!", description: "Anti-froud technology \n & \n Advanced triple layered security", animationName: "secure")
-        let page3 = PageModel(title: "Extra Spacing!", description: "All seats have 2 meter spacing \n \n Enjoy extra space", animationName: "seats")
+        let page3 = PageModel(title: "Extra Spacing!", description: "Most spacious travel experience \n \n Enjoy extra space", animationName: "seats")
         let page4 = PageModel(title: "We Go Everywhere!", description: "65000+ Routes \n & \n Over 2300 Operators Worldwide", animationName: "bus_road")
         slides = [page1, page2, page3, page4]
+        
+        nextBtn.layer.cornerRadius = 15
     }
     
     
