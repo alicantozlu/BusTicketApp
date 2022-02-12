@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     @IBAction func nextBtnAction(_ sender: Any) {
         if(currentPage == slides.count-1){
             // navigate to the next page
-            print("Go To Next Page")
+            dismiss(animated: true, completion: nil)
         } else if(currentPage != slides.count-1){
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     @IBAction func goToStartBtnAction(_ sender: Any) {
         if(currentPage == 0){
             // Get Started a basildiginde gecilecek ekran calisacak
-            print("Go Next Page")
+            dismiss(animated: true, completion: nil)
         } else if(currentPage == slides.count-1){
             nextBtn.setTitle("Next", for: .normal)
             currentPage = 0
