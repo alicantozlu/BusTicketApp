@@ -9,8 +9,19 @@ import UIKit
 
 class HomeScreenViewController: UIViewController {
       
+
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var destinationView: UIView!
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var searchBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleView.layer.cornerRadius = 7
+        destinationView.layer.cornerRadius = 12
+        dateView.layer.cornerRadius = 12
+        searchBtn.layer.cornerRadius = 10
     }
     
     override func viewDidAppear(_ animated: Bool) {
