@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */; };
+		B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C602095F27B86D6D00AD6BDF /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C602095E27B86D6D00AD6BDF /* HomeScreenViewController.swift */; };
 		C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FB27B92E6600C0CE62 /* Ticket.swift */; };
 		C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FD27B92E7100C0CE62 /* Passanger.swift */; };
@@ -25,6 +25,7 @@
 		C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8027B9702500442A2A /* TravelListViewController.swift */; };
 		C697CB8627B970C000442A2A /* TravelListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8427B970C000442A2A /* TravelListTableViewCell.swift */; };
 		C697CB8727B970C000442A2A /* TravelListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697CB8527B970C000442A2A /* TravelListTableViewCell.xib */; };
+		C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8927B9924700442A2A /* destinationInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C697CB8027B9702500442A2A /* TravelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListViewController.swift; sourceTree = "<group>"; };
 		C697CB8427B970C000442A2A /* TravelListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListTableViewCell.swift; sourceTree = "<group>"; };
 		C697CB8527B970C000442A2A /* TravelListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelListTableViewCell.xib; sourceTree = "<group>"; };
+		C697CB8927B9924700442A2A /* destinationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		C687FFFD27B6B26000FA6623 /* BussTicketApp */ = {
 			isa = PBXGroup;
 			children = (
+				C697CB8827B9923500442A2A /* Model */,
 				C687001627B6D9E200FA6623 /* Cells */,
 				C65AA20327B92E9000C0CE62 /* Classes */,
 				C602095D27B86D3700AD6BDF /* ViewControllers */,
@@ -146,6 +149,14 @@
 				C687000727B6B26000FA6623 /* BussTicketApp.xcdatamodeld */,
 			);
 			path = BussTicketApp;
+			sourceTree = "<group>";
+		};
+		C697CB8827B9923500442A2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C697CB8927B9924700442A2A /* destinationInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EEEA88CD37FA534F14D8E86F /* Frameworks */ = {
@@ -276,6 +287,7 @@
 				C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */,
 				C687000327B6B26000FA6623 /* ViewController.swift in Sources */,
 				C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */,
+				C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */,
 				C697CB8627B970C000442A2A /* TravelListTableViewCell.swift in Sources */,
 				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,

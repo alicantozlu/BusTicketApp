@@ -9,9 +9,16 @@ import UIKit
 
 class TravelListTableViewCell: UITableViewCell {
 
+    @IBOutlet var busImages: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var travelTimeLabel: UILabel!
+    @IBOutlet weak var destination1Label: UILabel!
+    @IBOutlet weak var destination2Label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

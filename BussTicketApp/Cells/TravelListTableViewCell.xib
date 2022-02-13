@@ -39,14 +39,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5s 40dk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJc-Sq-3Gy">
-                        <rect key="frame" x="240" y="60.5" width="60" height="20"/>
+                        <rect key="frame" x="240" y="57.5" width="60" height="20"/>
                         <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-jK-WOD">
-                        <rect key="frame" x="215" y="60.5" width="20" height="20"/>
+                        <rect key="frame" x="215" y="57.5" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="5kJ-LH-cwQ"/>
                             <constraint firstAttribute="height" constant="20" id="wse-XZ-hiR"/>
@@ -57,14 +57,41 @@
                             <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                         </buttonConfiguration>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samsun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4w-VR-HZG">
+                        <rect key="frame" x="155" y="86.5" width="77" height="24"/>
+                        <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samsun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-rz-7Oz">
+                        <rect key="frame" x="292" y="86.5" width="77" height="24"/>
+                        <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  &gt;&gt;&gt;&gt;  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-kW-XWE">
+                        <rect key="frame" x="232" y="88" width="60" height="21"/>
+                        <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="x3B-7c-x1r" secondAttribute="trailing" constant="30" id="5Av-UI-Vlf"/>
-                    <constraint firstItem="HJc-Sq-3Gy" firstAttribute="top" secondItem="x3B-7c-x1r" secondAttribute="bottom" constant="16.5" id="BcX-hj-7x5"/>
+                    <constraint firstItem="w4w-VR-HZG" firstAttribute="centerY" secondItem="2bP-kW-XWE" secondAttribute="centerY" id="8gw-2I-kLF"/>
+                    <constraint firstItem="HJc-Sq-3Gy" firstAttribute="top" secondItem="x3B-7c-x1r" secondAttribute="bottom" constant="13.5" id="BcX-hj-7x5"/>
                     <constraint firstItem="HJc-Sq-3Gy" firstAttribute="leading" secondItem="OcA-jK-WOD" secondAttribute="trailing" constant="5" id="EoD-Rl-Vym"/>
                     <constraint firstAttribute="trailingMargin" secondItem="HJc-Sq-3Gy" secondAttribute="trailing" constant="90" id="HmB-9H-34b"/>
+                    <constraint firstItem="2bP-kW-XWE" firstAttribute="leading" secondItem="w4w-VR-HZG" secondAttribute="trailing" id="InO-I2-TKl"/>
+                    <constraint firstItem="nSa-rz-7Oz" firstAttribute="centerY" secondItem="2bP-kW-XWE" secondAttribute="centerY" id="JzV-un-oZW"/>
                     <constraint firstItem="dh0-W1-lc3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17.5" id="Kdy-KZ-CAf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2bP-kW-XWE" secondAttribute="bottom" constant="10" id="Oou-E7-BD0"/>
+                    <constraint firstAttribute="trailing" secondItem="2bP-kW-XWE" secondAttribute="trailing" constant="118" id="QCN-Qx-R11"/>
                     <constraint firstItem="AXZ-4c-U8w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Rlv-J6-XNT"/>
+                    <constraint firstItem="nSa-rz-7Oz" firstAttribute="leading" secondItem="2bP-kW-XWE" secondAttribute="trailing" id="Ti3-Zz-aBx"/>
                     <constraint firstItem="OcA-jK-WOD" firstAttribute="centerY" secondItem="HJc-Sq-3Gy" secondAttribute="centerY" id="UFL-RO-cAW"/>
                     <constraint firstItem="x3B-7c-x1r" firstAttribute="leading" secondItem="dh0-W1-lc3" secondAttribute="trailing" constant="60" id="ptc-tc-t3r"/>
                     <constraint firstItem="x3B-7c-x1r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17.5" id="sv0-vc-1OH"/>
@@ -72,6 +99,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="busImages" destination="AXZ-4c-U8w" id="yif-lj-laB"/>
+                <outlet property="destination1Label" destination="w4w-VR-HZG" id="O7K-BV-q6g"/>
+                <outlet property="destination2Label" destination="nSa-rz-7Oz" id="eq8-YS-l9R"/>
+                <outlet property="priceLabel" destination="x3B-7c-x1r" id="0SC-3c-p7Z"/>
+                <outlet property="timeLabel" destination="dh0-W1-lc3" id="saA-w4-Zfc"/>
+                <outlet property="travelTimeLabel" destination="HJc-Sq-3Gy" id="pDC-sg-rvc"/>
+            </connections>
             <point key="canvasLocation" x="197.10144927536234" y="209.59821428571428"/>
         </tableViewCell>
     </objects>
