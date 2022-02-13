@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var goToStartBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
-    
+
     var slides = [PageModel]()
     
     var currentPage = 0 {

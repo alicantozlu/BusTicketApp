@@ -8,8 +8,6 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController {
-
-    var checkStart = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +15,14 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if(checkStart == 0){
-            checkStart = 1
+     
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "Onboarded")
+        var onboardCheck = defaults.bool(forKey: "Onboarded")
+        
+        if(onboardCheck){
+            defaults.set(false, forKey: "Onboarded")
+            var onboardCheck = defaults.bool(forKey: "Onboarded")
             self.onStart()
         }
     }
