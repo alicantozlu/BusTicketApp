@@ -34,7 +34,11 @@ class Ticket {
         // <AD> <SOYAD> <ID>, <GUN>/<AY>/<YIL>, <SAAT>:<DAKIKA> | <koltuk_no1> <koltuk_no2> . . .
     }
     
-    init(yolcu:Yolcu,tarih:Tarih,saat:Saat,){
-        
+    init(yolcuAdi:String,yolcuSoyadi:String,tarihGun:Int,tarihAy:Int,tarihYil:Int,saatDakika:Int,saatSaat:Int,koltuk:Int,koltukSayisi:Int){
+        self.yolcu = Yolcu(adi: yolcuAdi, soyadi: yolcuSoyadi, id: 0)
+        self.tarih = Tarih(gun: tarihGun, ay: tarihAy, yil: tarihYil)
+        self.saat = Saat(saat: saatSaat, dakika: saatDakika)
+        self.koltuk = koltuk
+        self.koltukSayisi = koltukSayisi
     }
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 struct Yolcu {
-    var adi: String = "isimsiz"
-    var soyadi: String = "isimsiz"
-    var id: Int = 0
+    var adi: String? = "isimsiz"
+    var soyadi: String? = "isimsiz"
+    var id: Int? = 0
     
     func yazdir(){
         // As-Soyad-ID formatinda yazdirilacak
