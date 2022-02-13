@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         
         let page1 = PageModel(title: "To Bus Ticket App!", description: "We are happy to see you.", animationName: "wellcome")
         let page2 = PageModel(title: "Safe & Easy Payment!", description: "Anti-froud technology \n & \n Advanced triple layered security", animationName: "secure")
-        let page3 = PageModel(title: "Extra Spacing!", description: "Most spacious travel experience \n \n Enjoy extra space", animationName: "seats")
+        let page3 = PageModel(title: "Extra Spacing!", description: "Seat spacing up to 2 meter \n \n Enjoy your spacious travel", animationName: "seats")
         let page4 = PageModel(title: "We Go Everywhere!", description: "65000+ Routes \n & \n Over 2300 Operators Worldwide", animationName: "bus_road")
         slides = [page1, page2, page3, page4]
         

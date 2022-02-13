@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -370,5 +371,41 @@
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="83.705357142857139"/>
         </scene>
+        <!--Travel List View Controller-->
+        <scene sceneID="XNw-Jf-3QO">
+            <objects>
+                <viewController id="tYG-3h-7f7" customClass="TravelListViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oeH-IZ-c3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pUw-wh-hnN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tYG-3h-7f7" id="9FD-Eh-vol"/>
+                                    <outlet property="delegate" destination="tYG-3h-7f7" id="RXE-uW-mC2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5lA-i8-FeX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pUw-wh-hnN" firstAttribute="leading" secondItem="5lA-i8-FeX" secondAttribute="leading" id="Y16-K7-3k1"/>
+                            <constraint firstItem="5lA-i8-FeX" firstAttribute="trailing" secondItem="pUw-wh-hnN" secondAttribute="trailing" id="ZFG-tr-o1L"/>
+                            <constraint firstItem="pUw-wh-hnN" firstAttribute="top" secondItem="5lA-i8-FeX" secondAttribute="top" id="dKy-37-Fuw"/>
+                            <constraint firstItem="5lA-i8-FeX" firstAttribute="bottom" secondItem="pUw-wh-hnN" secondAttribute="bottom" id="fDj-iE-drv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObT-ob-zrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="84"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
