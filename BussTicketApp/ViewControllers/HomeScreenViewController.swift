@@ -8,21 +8,17 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController {
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-     
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "Onboarded")
-        var onboardCheck = defaults.bool(forKey: "Onboarded")
-        
-        if(onboardCheck){
-            defaults.set(false, forKey: "Onboarded")
-            var onboardCheck = defaults.bool(forKey: "Onboarded")
+
+        let onboardCheck = UserDefaults.standard.bool(forKey: "Onboarded")
+        if(!onboardCheck){
+            UserDefaults.standard.set(true, forKey: "Onboarded")
             self.onStart()
         }
     }
