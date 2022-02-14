@@ -8,6 +8,7 @@
 import UIKit
 
 class TravelTableViewCell: UITableViewCell {
+    
     @IBOutlet var busImages: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -15,6 +16,7 @@ class TravelTableViewCell: UITableViewCell {
     @IBOutlet var destinationView: UIView!
     @IBOutlet weak var destination1Label: UILabel!
     @IBOutlet weak var destination2Label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         destinationView.layer.cornerRadius = 10

@@ -54,6 +54,7 @@ class HomeScreenViewController: UIViewController {
         guard let hour = hourLabel.text else { return }
         self.delegate?.sendMessage(from: from, to: to, date: date, hour: hour)
         let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
+        sendVC.modalPresentationStyle = .fullScreen
         present(sendVC, animated: true, completion: nil)
     }
 }

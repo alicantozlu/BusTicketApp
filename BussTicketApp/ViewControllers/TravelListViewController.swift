@@ -11,14 +11,16 @@ class TravelListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var destinations = [DestinationModel]()
-    var destination1: String = " "
-    var destination2: String = " "
+    var destination1: String = "Amasya"
+    var destination2: String = "Trabzon"
     var date: String = " "
     var hour: String = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.rowHeight = 150;
+        
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2))
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2))
         destinations.append(DestinationModel(image: "varan", time: "05:00", price: "250₺", travelTime: "7s 00dk", destination1: destination1, destination2: destination2))
@@ -33,7 +35,6 @@ class TravelListViewController: UIViewController {
         destinations.append(DestinationModel(image: "kamilKoc", time: "10:00", price: "310₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2))
         
         tableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
-        /*tableView.register(UINib(nibName: "TravelListTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCell")*/
     }
 }
 
@@ -48,7 +49,6 @@ extension TravelListViewController: UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "travelCellTest") as! TravelTableViewCell
-        /*let cell = tableView.dequeueReusableCell(withIdentifier: "travelCell") as! TravelListTableViewCell*/
         cell.configure(model: destinations[indexPath.row])
         return cell
     }
