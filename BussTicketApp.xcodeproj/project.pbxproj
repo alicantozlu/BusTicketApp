@@ -23,9 +23,9 @@
 		C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */; };
 		C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687FFFE27B6B26000FA6623 /* AppDelegate.swift */; };
 		C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8027B9702500442A2A /* TravelListViewController.swift */; };
-		C697CB8627B970C000442A2A /* TravelListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8427B970C000442A2A /* TravelListTableViewCell.swift */; };
-		C697CB8727B970C000442A2A /* TravelListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697CB8527B970C000442A2A /* TravelListTableViewCell.xib */; };
 		C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8927B9924700442A2A /* destinationInfo.swift */; };
+		C697CB9127B9DDB200442A2A /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */; };
+		C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +49,9 @@
 		C687FFFB27B6B26000FA6623 /* BussTicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BussTicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C687FFFE27B6B26000FA6623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C697CB8027B9702500442A2A /* TravelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListViewController.swift; sourceTree = "<group>"; };
-		C697CB8427B970C000442A2A /* TravelListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListTableViewCell.swift; sourceTree = "<group>"; };
-		C697CB8527B970C000442A2A /* TravelListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelListTableViewCell.xib; sourceTree = "<group>"; };
 		C697CB8927B9924700442A2A /* destinationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationInfo.swift; sourceTree = "<group>"; };
+		C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */,
-				C697CB8427B970C000442A2A /* TravelListTableViewCell.swift */,
-				C697CB8527B970C000442A2A /* TravelListTableViewCell.xib */,
+				C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */,
+				C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 			files = (
 				C687000E27B6B26200FA6623 /* LaunchScreen.storyboard in Resources */,
 				C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */,
+				C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */,
 				C687000627B6B26000FA6623 /* Main.storyboard in Resources */,
-				C697CB8727B970C000442A2A /* TravelListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +287,8 @@
 				C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */,
 				C687000327B6B26000FA6623 /* ViewController.swift in Sources */,
 				C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */,
+				C697CB9127B9DDB200442A2A /* TravelTableViewCell.swift in Sources */,
 				C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */,
-				C697CB8627B970C000442A2A /* TravelListTableViewCell.swift in Sources */,
 				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,
 				C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */,

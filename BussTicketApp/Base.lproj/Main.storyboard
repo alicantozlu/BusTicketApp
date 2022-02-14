@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYG-3h-7f7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uV2-RN-Qtd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -342,6 +342,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Otobüs Bileti Bul">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchBtnAction:" destination="uV2-RN-Qtd" eventType="touchUpInside" id="zSg-Sn-PUI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0En-NN-mo2"/>
@@ -361,10 +364,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="zka-5O-rh8" id="zLg-OM-gdo"/>
                         <outlet property="dateView" destination="aKh-YS-z8u" id="V67-Ui-lXs"/>
                         <outlet property="destinationView" destination="4u8-Zh-7s6" id="Yn0-4m-ra5"/>
+                        <outlet property="fromLebel" destination="47E-dX-dCk" id="Oj0-Ng-7sF"/>
+                        <outlet property="hourLabel" destination="0lw-bm-1uj" id="lUq-Pt-huB"/>
                         <outlet property="searchBtn" destination="lBc-Kv-dNo" id="stu-gU-7ND"/>
                         <outlet property="titleView" destination="JK3-V5-4fr" id="Qyy-11-lUm"/>
+                        <outlet property="toLabel" destination="LYD-Oz-8fW" id="L68-1h-k7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bg-O0-qNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -374,7 +381,7 @@
         <!--Travel List View Controller-->
         <scene sceneID="XNw-Jf-3QO">
             <objects>
-                <viewController id="tYG-3h-7f7" customClass="TravelListViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TravelListIdentity" id="tYG-3h-7f7" customClass="TravelListViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeH-IZ-c3T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
