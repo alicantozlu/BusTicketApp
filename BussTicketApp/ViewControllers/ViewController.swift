@@ -57,6 +57,16 @@ class ViewController: UIViewController {
         slides = [page1, page2, page3, page4]
         
         nextBtn.layer.cornerRadius = 15
+        
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
+            self.currentPage += 1
+            let indexPath = IndexPath(item: self.currentPage, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+
+            if self.currentPage == self.slides.count-1 {
+                timer.invalidate()
+            }
+        }
     }
     
     

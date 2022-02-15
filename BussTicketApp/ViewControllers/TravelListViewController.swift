@@ -11,10 +11,10 @@ class TravelListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var destinations = [DestinationModel]()
-    var destination1: String = "Amasya"
-    var destination2: String = "Trabzon"
-    var date: String = " "
-    var hour: String = " "
+    var destination1: String = ""
+    var destination2: String = ""
+    var date: String = ""
+    var hour: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
