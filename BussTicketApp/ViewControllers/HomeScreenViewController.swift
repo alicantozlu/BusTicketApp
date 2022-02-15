@@ -19,7 +19,11 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var hourLabel: UITextField!
     
+<<<<<<< HEAD
     //var delegate: MessageDelegate?
+=======
+    var delegate: MessageDelegate?
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,7 @@ class HomeScreenViewController: UIViewController {
         onboardingVC.modalPresentationStyle = .fullScreen
         present(onboardingVC, animated: true, completion: nil)
         
+<<<<<<< HEAD
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {
@@ -63,7 +68,24 @@ class HomeScreenViewController: UIViewController {
         
         sendVC.modalPresentationStyle = .fullScreen
         present(sendVC, animated: true, completion: nil)
+=======
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
     }
+    
+    @IBAction func searchBtnAction(_ sender: Any) {
+        guard let from = fromLebel.text else { return }
+        guard let to = toLabel.text else { return }
+        guard let date = dateLabel.text else { return }
+        guard let hour = hourLabel.text else { return }
+        self.delegate?.sendMessage(from: from, to: to, date: date, hour: hour)
+        let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
+        sendVC.modalPresentationStyle = .fullScreen
+        present(sendVC, animated: true, completion: nil)
+    }
+}
+
+protocol MessageDelegate {
+    func sendMessage(from: String,to: String, date: String, hour: String)
 }
 /*
 protocol MessageDelegate {

@@ -11,16 +11,24 @@ class TravelListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var destinations = [DestinationModel]()
+<<<<<<< HEAD
     var destination1: String = ""
     var destination2: String = ""
     var date: String = ""
     var hour: String = ""
+=======
+    var destination1: String = "Amasya"
+    var destination2: String = "Trabzon"
+    var date: String = " "
+    var hour: String = " "
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.rowHeight = 150;
         
+<<<<<<< HEAD
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "varan", time: "05:00", price: "250₺", travelTime: "7s 00dk", destination1: destination1, destination2: destination2, date: date))
@@ -33,18 +41,41 @@ class TravelListViewController: UIViewController {
         destinations.append(DestinationModel(image: "pamukkale", time: "10:00", price: "300₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "metro", time: "10:00", price: "310₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "kamilKoc", time: "10:00", price: "310₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2, date: date))
+=======
+        destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "varan", time: "05:00", price: "250₺", travelTime: "7s 00dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "pamukkale", time: "05:00", price: "255₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "metro", time: "06:30", price: "260₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "metro", time: "07:00", price: "270₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "pamukkale", time: "08:00", price: "280₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "varan", time: "08:00", price: "300₺", travelTime: "8s 00dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "kamilKoc", time: "08:30", price: "300₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "pamukkale", time: "10:00", price: "300₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "metro", time: "10:00", price: "310₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2))
+        destinations.append(DestinationModel(image: "kamilKoc", time: "10:00", price: "310₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2))
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
         
         tableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
     }
 }
 
+<<<<<<< HEAD
 extension TravelListViewController: UITableViewDelegate, UITableViewDataSource/*, MessageDelegate*/{
     /*func sendMessage(from: String, to: String, date: String, hour: String) {
+=======
+extension TravelListViewController: UITableViewDelegate, UITableViewDataSource, MessageDelegate{
+    func sendMessage(from: String, to: String, date: String, hour: String) {
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
         self.destination1 = from
         self.destination2 = to
         self.date = date
         self.hour = hour
+<<<<<<< HEAD
     }*/
+=======
+    }
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -14,5 +14,8 @@ struct DestinationModel{
     var travelTime: String
     var destination1: String
     var destination2: String
+<<<<<<< HEAD
     var date: String
+=======
+>>>>>>> 8d7acbd44428813affbfe02ddb136a768b90b7d4
 }
