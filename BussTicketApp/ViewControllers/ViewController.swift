@@ -52,11 +52,21 @@ class ViewController: UIViewController {
         
         let page1 = PageModel(title: "To Bus Ticket App!", description: "We are happy to see you.", animationName: "wellcome")
         let page2 = PageModel(title: "Safe & Easy Payment!", description: "Anti-froud technology \n & \n Advanced triple layered security", animationName: "secure")
-        let page3 = PageModel(title: "Extra Spacing!", description: "Most spacious travel experience \n \n Enjoy extra space", animationName: "seats")
+        let page3 = PageModel(title: "Extra Spacing!", description: "Seat spacing up to 2 meter \n \n Enjoy your spacious travel", animationName: "seats")
         let page4 = PageModel(title: "We Go Everywhere!", description: "65000+ Routes \n & \n Over 2300 Operators Worldwide", animationName: "bus_road")
         slides = [page1, page2, page3, page4]
         
         nextBtn.layer.cornerRadius = 15
+        
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
+            self.currentPage += 1
+            let indexPath = IndexPath(item: self.currentPage, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+
+            if self.currentPage == self.slides.count-1 {
+                timer.invalidate()
+            }
+        }
     }
     
     

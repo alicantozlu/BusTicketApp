@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */; };
+		B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C602095F27B86D6D00AD6BDF /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C602095E27B86D6D00AD6BDF /* HomeScreenViewController.swift */; };
 		C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FB27B92E6600C0CE62 /* Ticket.swift */; };
 		C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FD27B92E7100C0CE62 /* Passanger.swift */; };
 		C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FF27B92E7C00C0CE62 /* Date.swift */; };
 		C65AA20227B92E8B00C0CE62 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA20127B92E8B00C0CE62 /* Hour.swift */; };
+		C678090927BB35AA009E7B2F /* BusSeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678090827BB35AA009E7B2F /* BusSeatsViewController.swift */; };
 		C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000027B6B26000FA6623 /* SceneDelegate.swift */; };
 		C687000327B6B26000FA6623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000227B6B26000FA6623 /* ViewController.swift */; };
 		C687000627B6B26000FA6623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000427B6B26000FA6623 /* Main.storyboard */; };
@@ -22,6 +23,10 @@
 		C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */; };
 		C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */; };
 		C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687FFFE27B6B26000FA6623 /* AppDelegate.swift */; };
+		C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8027B9702500442A2A /* TravelListViewController.swift */; };
+		C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8927B9924700442A2A /* destinationInfo.swift */; };
+		C697CB9127B9DDB200442A2A /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */; };
+		C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,7 @@
 		C65AA1FD27B92E7100C0CE62 /* Passanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passanger.swift; sourceTree = "<group>"; };
 		C65AA1FF27B92E7C00C0CE62 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C65AA20127B92E8B00C0CE62 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		C678090827BB35AA009E7B2F /* BusSeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSeatsViewController.swift; sourceTree = "<group>"; };
 		C687000027B6B26000FA6623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C687000227B6B26000FA6623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C687000527B6B26000FA6623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +50,10 @@
 		C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPagesModel.swift; sourceTree = "<group>"; };
 		C687FFFB27B6B26000FA6623 /* BussTicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BussTicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C687FFFE27B6B26000FA6623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C697CB8027B9702500442A2A /* TravelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListViewController.swift; sourceTree = "<group>"; };
+		C697CB8927B9924700442A2A /* destinationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destinationInfo.swift; sourceTree = "<group>"; };
+		C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 			children = (
 				C687000227B6B26000FA6623 /* ViewController.swift */,
 				C602095E27B86D6D00AD6BDF /* HomeScreenViewController.swift */,
+				C697CB8027B9702500442A2A /* TravelListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */,
+				C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */,
+				C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -124,6 +137,7 @@
 		C687FFFD27B6B26000FA6623 /* BussTicketApp */ = {
 			isa = PBXGroup;
 			children = (
+				C697CB8827B9923500442A2A /* Model */,
 				C687001627B6D9E200FA6623 /* Cells */,
 				C65AA20327B92E9000C0CE62 /* Classes */,
 				C602095D27B86D3700AD6BDF /* ViewControllers */,
@@ -137,6 +151,14 @@
 				C687000727B6B26000FA6623 /* BussTicketApp.xcdatamodeld */,
 			);
 			path = BussTicketApp;
+			sourceTree = "<group>";
+		};
+		C697CB8827B9923500442A2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C697CB8927B9924700442A2A /* destinationInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EEEA88CD37FA534F14D8E86F /* Frameworks */ = {
@@ -209,6 +231,7 @@
 			files = (
 				C687000E27B6B26200FA6623 /* LaunchScreen.storyboard in Resources */,
 				C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */,
+				C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */,
 				C687000627B6B26000FA6623 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +289,12 @@
 				C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */,
 				C687000327B6B26000FA6623 /* ViewController.swift in Sources */,
 				C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */,
+				C697CB9127B9DDB200442A2A /* TravelTableViewCell.swift in Sources */,
+				C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */,
 				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
+				C678090927BB35AA009E7B2F /* BusSeatsViewController.swift in Sources */,
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,
+				C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */,
 				C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */,
 				C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */,
 				C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */,
