@@ -116,8 +116,7 @@ public class ALBusSeatView: UIView {
     private let headerID = "HeaderView"
     
     lazy private var tooltip: ALSelectionTooltip = {
-        let tooltip = ALSelectionTooltip(frame: CGRect(x: 0, y: 0,
-                                                       width: 160, height: 60))
+        let tooltip = ALSelectionTooltip(frame: CGRect(x: 0, y: 0, width: 110, height: 60))
         return tooltip
     }()
     
@@ -222,15 +221,61 @@ public class ALBusSeatView: UIView {
 /// :nodoc:
 extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID,
-                                                      for: indexPath) as! ALBusSeatCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID,  for: indexPath) as! ALBusSeatCell
         
         guard let seatType = dataSource?.seatView(self, seatTypeForIndex: indexPath),
-            let seatNumber = dataSource?.seatView(self, seatNumberForIndex: indexPath) else {
+             var seatNumber = dataSource?.seatView(self, seatNumberForIndex: indexPath) else {
                 return cell
+        }
+        
+        let x = Int(seatNumber)!
+        // 3 8 13 18 23 28 33 38 43 48 53 58
+        if( x >= 2 && x <= 7 ){
+           seatNumber = String(Int(seatNumber)! - 2)
+        } else if ( x >= 8 && x <= 13 ){
+            seatNumber = String(Int(seatNumber)! - 4)
+        } else if ( x >= 13 && x <= 17 ){
+            seatNumber = String(Int(seatNumber)! - 6)
+        } else if (x >= 18 && x <= 22 ){
+            seatNumber = String(Int(seatNumber)! - 8)
+        } else if (x >= 23 && x <= 27 ){
+            seatNumber = String(Int(seatNumber)! - 10)
+        } else if (x >= 28 && x <= 32 ){
+            seatNumber = String(Int(seatNumber)! - 12)
+        } else if (x >= 33 && x <= 37 ){
+            seatNumber = String(Int(seatNumber)! - 14)
+        } else if (x >= 38 && x <= 42 ){
+            seatNumber = String(Int(seatNumber)! - 16)
+        } else if (x >= 43 && x <= 47 ){
+            seatNumber = String(Int(seatNumber)! - 18)
+        } else if (x >= 48 && x <= 52 ){
+            seatNumber = String(Int(seatNumber)! - 20)
+        } else if (x >= 53 && x <= 57 ){
+            seatNumber = String(Int(seatNumber)! - 22)
+        } else if (x >= 58 && x <= 62 ){
+            seatNumber = String(Int(seatNumber)! - 24)
+        } else if (x >= 63 && x <= 67 ){
+            seatNumber = String(Int(seatNumber)! - 26)
+        } else if (x >= 68 && x <= 72 ){
+            seatNumber = String(Int(seatNumber)! - 28)
+        } else if (x >= 73 && x <= 77 ){
+            seatNumber = String(Int(seatNumber)! - 30)
+        } else if (x >= 78 && x <= 82 ){
+            seatNumber = String(Int(seatNumber)! - 32)
+        } else if (x >= 83 && x <= 87 ){
+            seatNumber = String(Int(seatNumber)! - 34)
+        } else if (x >= 88 && x <= 92 ){
+            seatNumber = String(Int(seatNumber)! - 36)
+        } else if (x >= 93 && x <= 97 ){
+            seatNumber = String(Int(seatNumber)! - 38)
+        } else if (x >= 98 && x <= 102 ){
+            seatNumber = String(Int(seatNumber)! - 40)
+        } else if (x >= 103 && x <= 107 ){
+            seatNumber = String(Int(seatNumber)! - 42)
+        } else if (x >= 108 && x <= 112 ){
+            seatNumber = String(Int(seatNumber)! - 44)
         }
         
         cell.title = seatNumber
@@ -277,30 +322,21 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         return dataSource?.numberOfSections(in: self) ?? 0
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource?.seatView(self, numberOfSeatInSection: section) ?? 0
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               layout collectionViewLayout: UICollectionViewLayout,
-                               minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return config.marginBetweenSeats
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               layout collectionViewLayout: UICollectionViewLayout,
-                               minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return config.marginBetweenSeats / 2
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               viewForSupplementaryElementOfKind kind: String,
-                               at indexPath: IndexPath) -> UICollectionReusableView {
+    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
-                                                                         withReuseIdentifier: headerID,
-                                                                         for: indexPath) as! ALBusSeatViewHeaderView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID, for: indexPath) as! ALBusSeatViewHeaderView
         
         if indexPath.section == 0 && config.busFrontImage != nil {
             headerView.imageView.image = config.busFrontImage
@@ -311,9 +347,7 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         return headerView
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               layout collectionViewLayout: UICollectionViewLayout,
-                               referenceSizeForHeaderInSection section: Int) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 && config.busFrontImage != nil {
             return CGSize(width: config.busFrontImageWidth, height: collectionView.frame.height)
         } else if section > 0 {
@@ -323,9 +357,7 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
-                               layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let colH = collectionView.frame.height
         let totalMargin = config.marginBetweenSeats * 4

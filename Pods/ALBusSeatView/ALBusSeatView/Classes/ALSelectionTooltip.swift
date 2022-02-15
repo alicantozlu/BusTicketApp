@@ -43,7 +43,7 @@ class ALSelectionTooltip: UIView {
     
     private lazy var bgImageView: UIImageView = {
         let imgView = UIImageView()
-        imgView.contentMode = .scaleAspectFill
+        imgView.contentMode = .scaleToFill//.scaleAspectFill
         imgView.layer.shadowColor = UIColor.gray.cgColor
         imgView.layer.shadowRadius = 7
         imgView.layer.shadowOpacity = 0.5
