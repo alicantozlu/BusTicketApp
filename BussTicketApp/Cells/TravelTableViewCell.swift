@@ -16,6 +16,7 @@ class TravelTableViewCell: UITableViewCell {
     @IBOutlet var destinationView: UIView!
     @IBOutlet weak var destination1Label: UILabel!
     @IBOutlet weak var destination2Label: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,5 +35,6 @@ class TravelTableViewCell: UITableViewCell {
         self.travelTimeLabel.text = model.travelTime
         self.destination1Label.text = model.destination1
         self.destination2Label.text = model.destination2
+        self.dateLabel.text = model.date
     }
 }

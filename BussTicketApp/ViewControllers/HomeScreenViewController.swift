@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var hourLabel: UITextField!
     
-    var delegate: MessageDelegate?
+    //var delegate: MessageDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +52,20 @@ class HomeScreenViewController: UIViewController {
         guard let to = toLabel.text else { return }
         guard let date = dateLabel.text else { return }
         guard let hour = hourLabel.text else { return }
-        self.delegate?.sendMessage(from: from, to: to, date: date, hour: hour)
+        //self.delegate?.sendMessage(from: from, to: to, date: date, hour: hour)
         
         let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
+        
         sendVC.destination1 = from
+        sendVC.destination2 = to
+        sendVC.date = date
+        sendVC.hour = hour
         
         sendVC.modalPresentationStyle = .fullScreen
         present(sendVC, animated: true, completion: nil)
-        
-        
     }
 }
-
+/*
 protocol MessageDelegate {
     func sendMessage(from: String,to: String, date: String, hour: String)
-}
+}*/
