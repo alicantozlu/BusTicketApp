@@ -44,7 +44,6 @@ class HomeScreenViewController: UIViewController {
         let onboardingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "onboardingIdentity") as! ViewController
         onboardingVC.modalPresentationStyle = .fullScreen
         present(onboardingVC, animated: true, completion: nil)
-        
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {

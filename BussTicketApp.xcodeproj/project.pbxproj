@@ -27,6 +27,9 @@
 		C697CB9127B9DDB200442A2A /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */; };
 		C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */; };
 		C6FED6C127BBEDA300916158 /* BusScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FED6C027BBEDA300916158 /* BusScreenViewController.swift */; };
+		C6FED6C427BC02F500916158 /* SeatConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FED6C327BC02F500916158 /* SeatConfig.swift */; };
+		C6FED6C627BC03CA00916158 /* SeatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FED6C527BC03CA00916158 /* SeatDataManager.swift */; };
+		C6FED6C827BC041D00916158 /* MockSeatCreater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FED6C727BC041D00916158 /* MockSeatCreater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		C697CB8F27B9DDB200442A2A /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
 		C6FED6C027BBEDA300916158 /* BusScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusScreenViewController.swift; sourceTree = "<group>"; };
+		C6FED6C327BC02F500916158 /* SeatConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatConfig.swift; sourceTree = "<group>"; };
+		C6FED6C527BC03CA00916158 /* SeatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataManager.swift; sourceTree = "<group>"; };
+		C6FED6C727BC041D00916158 /* MockSeatCreater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSeatCreater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		C687FFFD27B6B26000FA6623 /* BussTicketApp */ = {
 			isa = PBXGroup;
 			children = (
+				C6FED6C227BC029F00916158 /* BusSeatFiles */,
 				C697CB8827B9923500442A2A /* Model */,
 				C687001627B6D9E200FA6623 /* Cells */,
 				C65AA20327B92E9000C0CE62 /* Classes */,
@@ -160,6 +167,16 @@
 				C697CB8927B9924700442A2A /* destinationInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C6FED6C227BC029F00916158 /* BusSeatFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C6FED6C327BC02F500916158 /* SeatConfig.swift */,
+				C6FED6C527BC03CA00916158 /* SeatDataManager.swift */,
+				C6FED6C727BC041D00916158 /* MockSeatCreater.swift */,
+			);
+			path = BusSeatFiles;
 			sourceTree = "<group>";
 		};
 		EEEA88CD37FA534F14D8E86F /* Frameworks */ = {
@@ -295,11 +312,14 @@
 				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
 				C6FED6C127BBEDA300916158 /* BusScreenViewController.swift in Sources */,
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,
+				C6FED6C827BC041D00916158 /* MockSeatCreater.swift in Sources */,
 				C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */,
 				C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */,
 				C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */,
 				C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */,
+				C6FED6C627BC03CA00916158 /* SeatDataManager.swift in Sources */,
 				C602095F27B86D6D00AD6BDF /* HomeScreenViewController.swift in Sources */,
+				C6FED6C427BC02F500916158 /* SeatConfig.swift in Sources */,
 				C65AA20227B92E8B00C0CE62 /* Hour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

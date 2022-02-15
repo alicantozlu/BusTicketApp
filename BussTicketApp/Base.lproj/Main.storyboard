@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uV2-RN-Qtd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iH-em-WBe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -482,24 +482,48 @@
                                     <constraint firstAttribute="width" constant="414" id="zuH-9b-jMr"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-JM-OLa" customClass="ALBusSeatView" customModule="ALBusSeatView">
+                                <rect key="frame" x="10" y="116" width="404" height="250"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.2373050451" green="0.56992042060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="KfI-Px-wno"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-G5-Shy">
+                                <rect key="frame" x="0.0" y="376" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="u24-Rn-BD5"/>
+                                    <constraint firstAttribute="width" constant="414" id="zRB-s0-bbn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YRS-25-ebW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JpR-LD-Dq8" firstAttribute="top" secondItem="YRS-25-ebW" secondAttribute="top" id="5Ut-lw-GEn"/>
+                            <constraint firstItem="rSb-JM-OLa" firstAttribute="top" secondItem="CGm-bh-DeI" secondAttribute="bottom" constant="10" id="BZf-sa-ot4"/>
                             <constraint firstItem="JpR-LD-Dq8" firstAttribute="leading" secondItem="YRS-25-ebW" secondAttribute="leading" constant="20" id="Bjv-jW-SV5"/>
+                            <constraint firstItem="CLi-G5-Shy" firstAttribute="leading" secondItem="i2o-LX-G7T" secondAttribute="leading" id="MAE-ae-fXk"/>
                             <constraint firstItem="CGm-bh-DeI" firstAttribute="top" secondItem="JpR-LD-Dq8" secondAttribute="bottom" constant="10" id="TOd-pN-FOz"/>
+                            <constraint firstAttribute="trailing" secondItem="CLi-G5-Shy" secondAttribute="trailing" id="Z0g-nW-jBO"/>
+                            <constraint firstItem="CLi-G5-Shy" firstAttribute="top" secondItem="rSb-JM-OLa" secondAttribute="bottom" constant="10" id="fpp-wv-OYP"/>
+                            <constraint firstItem="YRS-25-ebW" firstAttribute="trailing" secondItem="rSb-JM-OLa" secondAttribute="trailing" id="hho-p0-1QJ"/>
+                            <constraint firstItem="rSb-JM-OLa" firstAttribute="leading" secondItem="YRS-25-ebW" secondAttribute="leading" constant="10" id="rBD-Jz-YUB"/>
                             <constraint firstAttribute="trailing" secondItem="CGm-bh-DeI" secondAttribute="trailing" id="syq-3I-tAd"/>
                             <constraint firstItem="CGm-bh-DeI" firstAttribute="leading" secondItem="i2o-LX-G7T" secondAttribute="leading" id="tMd-Iy-KsT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="goBackButton" destination="JpR-LD-Dq8" id="H9E-g0-RrO"/>
+                        <outlet property="seatView" destination="rSb-JM-OLa" id="3DR-za-5a9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhE-tK-WNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2494" y="84"/>
+            <point key="canvasLocation" x="2492.753623188406" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
