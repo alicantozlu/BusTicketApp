@@ -1,16 +1,20 @@
 PODS:
+  - ALBusSeatView (0.2.5)
   - lottie-ios (3.3.0)
 
 DEPENDENCIES:
+  - ALBusSeatView
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - ALBusSeatView
     - lottie-ios
 
 SPEC CHECKSUMS:
+  ALBusSeatView: 5416cf8e3d0d8d993da5f726f92cbb425463efd2
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
 
-PODFILE CHECKSUM: 21c19a4845348f639cef0a422e74dcf13ec59671
+PODFILE CHECKSUM: 1f9e283214bed84b08ca88ca7cca24e95eab6be9
 
 COCOAPODS: 1.11.2

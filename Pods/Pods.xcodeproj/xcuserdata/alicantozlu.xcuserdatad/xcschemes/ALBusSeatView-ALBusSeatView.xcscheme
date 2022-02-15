@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF136C8B6BF039B90B6A1E1DCA5EE1F5"
-               BuildableName = "Pods_BussTicketApp.framework"
-               BlueprintName = "Pods-BussTicketApp"
+               BlueprintIdentifier = "FE45EE8C5698069280DB3C30FAEF1B1E"
+               BuildableName = "ALBusSeatView.bundle"
+               BlueprintName = "ALBusSeatView-ALBusSeatView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

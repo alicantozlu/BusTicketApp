@@ -4,4 +4,5 @@
 target 'BussTicketApp' do
   use_frameworks!
   pod 'lottie-ios'
+  pod 'ALBusSeatView'
 end

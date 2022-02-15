@@ -62,6 +62,7 @@ class HomeScreenViewController: UIViewController {
         sendVC.hour = hour
         
         sendVC.modalPresentationStyle = .fullScreen
+        sendVC.modalTransitionStyle = .coverVertical
         present(sendVC, animated: true, completion: nil)
     }
 }

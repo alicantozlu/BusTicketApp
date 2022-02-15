@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -386,7 +387,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pUw-wh-hnN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -397,23 +398,113 @@
                                     <outlet property="delegate" destination="tYG-3h-7f7" id="RXE-uW-mC2"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi7-Dd-loa">
+                                <rect key="frame" x="20" y="44" width="110" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Gq3-e5-H3C"/>
+                                    <constraint firstAttribute="height" constant="50" id="e7C-T9-stQ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Go Back">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBackButtonAction:" destination="tYG-3h-7f7" eventType="touchUpInside" id="8Ee-FY-XZc"/>
+                                    <action selector="searchBtnAction:" destination="uV2-RN-Qtd" eventType="touchUpInside" id="5K5-6e-P8s"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ru-v1-SLY">
+                                <rect key="frame" x="0.0" y="104" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="cCd-Yg-aeP"/>
+                                    <constraint firstAttribute="width" constant="414" id="xMy-ed-BD1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5lA-i8-FeX"/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8Ru-v1-SLY" firstAttribute="top" secondItem="gi7-Dd-loa" secondAttribute="bottom" constant="10" id="Hvd-b6-kL1"/>
+                            <constraint firstItem="8Ru-v1-SLY" firstAttribute="centerX" secondItem="oeH-IZ-c3T" secondAttribute="centerX" id="Tcd-BD-UaJ"/>
                             <constraint firstItem="pUw-wh-hnN" firstAttribute="leading" secondItem="5lA-i8-FeX" secondAttribute="leading" id="Y16-K7-3k1"/>
                             <constraint firstItem="5lA-i8-FeX" firstAttribute="trailing" secondItem="pUw-wh-hnN" secondAttribute="trailing" id="ZFG-tr-o1L"/>
-                            <constraint firstItem="pUw-wh-hnN" firstAttribute="top" secondItem="5lA-i8-FeX" secondAttribute="top" id="dKy-37-Fuw"/>
+                            <constraint firstItem="pUw-wh-hnN" firstAttribute="top" secondItem="8Ru-v1-SLY" secondAttribute="bottom" id="a3v-X2-ha0"/>
                             <constraint firstItem="5lA-i8-FeX" firstAttribute="bottom" secondItem="pUw-wh-hnN" secondAttribute="bottom" id="fDj-iE-drv"/>
+                            <constraint firstItem="gi7-Dd-loa" firstAttribute="leading" secondItem="5lA-i8-FeX" secondAttribute="leading" constant="20" id="w2C-rm-fcj"/>
+                            <constraint firstItem="gi7-Dd-loa" firstAttribute="top" secondItem="5lA-i8-FeX" secondAttribute="top" id="wF3-zT-gwY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goBackButton" destination="gi7-Dd-loa" id="BRj-HQ-Blc"/>
                         <outlet property="tableView" destination="pUw-wh-hnN" id="NFo-zL-dqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObT-ob-zrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1683" y="84"/>
+            <point key="canvasLocation" x="1682.608695652174" y="83.705357142857139"/>
+        </scene>
+        <!--Bus Screen View Controller-->
+        <scene sceneID="1Vy-nH-0bx">
+            <objects>
+                <viewController storyboardIdentifier="busScreenIdentity" id="4iH-em-WBe" customClass="BusScreenViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i2o-LX-G7T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-LD-Dq8">
+                                <rect key="frame" x="20" y="44" width="110" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Euo-ih-6nb"/>
+                                    <constraint firstAttribute="width" constant="110" id="pni-Rz-LXD"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Go Back">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBackButtonAction:" destination="4iH-em-WBe" eventType="touchUpInside" id="wW2-Is-A2h"/>
+                                    <action selector="goBackButtonAction:" destination="tYG-3h-7f7" eventType="touchUpInside" id="wZP-Eb-UaX"/>
+                                    <action selector="searchBtnAction:" destination="uV2-RN-Qtd" eventType="touchUpInside" id="6sl-oe-2W3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGm-bh-DeI">
+                                <rect key="frame" x="0.0" y="104" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.1215686275" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="3Xr-dd-zid"/>
+                                    <constraint firstAttribute="width" constant="414" id="zuH-9b-jMr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YRS-25-ebW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JpR-LD-Dq8" firstAttribute="top" secondItem="YRS-25-ebW" secondAttribute="top" id="5Ut-lw-GEn"/>
+                            <constraint firstItem="JpR-LD-Dq8" firstAttribute="leading" secondItem="YRS-25-ebW" secondAttribute="leading" constant="20" id="Bjv-jW-SV5"/>
+                            <constraint firstItem="CGm-bh-DeI" firstAttribute="top" secondItem="JpR-LD-Dq8" secondAttribute="bottom" constant="10" id="TOd-pN-FOz"/>
+                            <constraint firstAttribute="trailing" secondItem="CGm-bh-DeI" secondAttribute="trailing" id="syq-3I-tAd"/>
+                            <constraint firstItem="CGm-bh-DeI" firstAttribute="leading" secondItem="i2o-LX-G7T" secondAttribute="leading" id="tMd-Iy-KsT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="JpR-LD-Dq8" id="H9E-g0-RrO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhE-tK-WNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2494" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -9,6 +9,7 @@ import UIKit
 
 class TravelListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var goBackButton: UIButton!
     
     var destinations = [DestinationModel]()
     var destination1: String = ""
@@ -19,6 +20,7 @@ class TravelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        goBackButton.layer.cornerRadius = 10
         self.tableView.rowHeight = 150;
         
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
@@ -36,6 +38,18 @@ class TravelListViewController: UIViewController {
         
         tableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
     }
+    @IBAction func goBackButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let busScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "busScreenIdentity") as! BusScreenViewController
+        busScreenVC.modalPresentationStyle = .fullScreen
+        busScreenVC.modalTransitionStyle = .flipHorizontal
+
+        present(busScreenVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension TravelListViewController: UITableViewDelegate, UITableViewDataSource/*, MessageDelegate*/{
