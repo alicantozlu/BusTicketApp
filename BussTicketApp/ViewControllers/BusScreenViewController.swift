@@ -12,9 +12,14 @@ class BusScreenViewController: UIViewController {
 
     @IBOutlet var goBackButton: UIButton!
     @IBOutlet var seatView: ALBusSeatView!
+    @IBOutlet var yolcuSayisiLabel: UILabel!
+    @IBOutlet var bosKoltukLabel: UILabel!
+    @IBOutlet var buyButton: UIButton!
+    
     var dataManager = SeatDataManager()
     
     var travelIndex: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +34,31 @@ class BusScreenViewController: UIViewController {
         //let second = mock.create(count: 45)
         dataManager.seatList = [first/*,second*/]
         seatView?.reload()
+        
+        yolcuSayisiLabel.text = String(mock.yolcuSayisi)
+        bosKoltukLabel.text = String(45 - mock.yolcuSayisi)
+        
+
+    }
+    
+    @IBAction func buyButtonAction(_ sender: Any) {
+       
+        print("\(seatVie)")
+        for i in 0...dataManager.selectedSeatlist.count-1{
+             //print("----->> \(dataManager.selectedSeatlist[i].number)")
+            
+         }
     }
     
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    func showAlert(){
+   /* func showAlert(){
         let alertController = UIAlertController(title: "Alım sınırına ulaştınız!", message: "Maksimum bilet alımı '5' ile sınırlandırılmıştır.\nDaha fazla bilgi için lütfen destek ekibine ulaşınız.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
-    }
+    }*/
 
 }

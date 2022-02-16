@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iH-em-WBe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uV2-RN-Qtd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -577,7 +577,13 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Satın Al">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buyButtonAction:" destination="4iH-em-WBe" eventType="touchUpInside" id="pCt-Ja-E39"/>
                                     <action selector="searchBtnAction:" destination="uV2-RN-Qtd" eventType="touchUpInside" id="C9J-Oc-MQ9"/>
                                 </connections>
                             </button>
@@ -786,8 +792,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bosKoltukLabel" destination="ph5-L5-Sp6" id="eWT-NA-nDZ"/>
+                        <outlet property="buyButton" destination="WhY-gq-QeW" id="AEJ-M3-4JY"/>
                         <outlet property="goBackButton" destination="JpR-LD-Dq8" id="H9E-g0-RrO"/>
                         <outlet property="seatView" destination="rSb-JM-OLa" id="3DR-za-5a9"/>
+                        <outlet property="yolcuSayisiLabel" destination="aDK-b7-Kqe" id="s5u-c2-ifO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhE-tK-WNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

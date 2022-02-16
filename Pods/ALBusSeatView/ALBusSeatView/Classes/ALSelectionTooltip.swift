@@ -40,7 +40,6 @@ class ALSelectionTooltip: UIView {
         }
     }
     
-    
     private lazy var bgImageView: UIImageView = {
         let imgView = UIImageView()
         imgView.contentMode = .scaleToFill//.scaleAspectFill

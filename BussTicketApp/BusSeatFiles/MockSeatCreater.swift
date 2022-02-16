@@ -16,6 +16,9 @@ struct SeatStub {
 }
 
 class MockSeatCreater {
+    
+    var yolcuSayisi:Int = 0
+    
     func create(count: Int) -> [SeatStub] {
         var list = [SeatStub]()
         (1...count).forEach { (count) in
@@ -26,6 +29,9 @@ class MockSeatCreater {
                 salable: Bool.random(),
                 gender: Bool.random(),
                 hall: isHall)
+            if(stub.salable == false && stub.hall == false){
+                yolcuSayisi += 1
+            }
             list.append(stub)
         }
         return list

@@ -13,25 +13,19 @@ class SeatDataManager {
     var selectedSeatlist = [SeatStub]()
 }
 
-
 extension SeatDataManager: ALBusSeatViewDelegate {
     
     func seatView(_ seatView: ALBusSeatView, didSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType, selectionType: ALSelectionType){
         
         if(selectedSeatlist.count == 5){
-            let busScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "busScreenIdentity") as! BusScreenViewController
-            busScreenVC.showAlert()
+            // SHOW ALERT
             return
         }
         var stub = seatList[indexPath.section][indexPath.item]
         stub.gender = selectionType == .man ? true : false
         selectedSeatlist.append(stub)
         seatView.reload()
-        
-        for i in 0...selectedSeatlist.count-1{
-            print("----->> \(selectedSeatlist[i].number)")
-        }
-        
+                
     }
     
     func seatView(_ seatView: ALBusSeatView, deSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType) {

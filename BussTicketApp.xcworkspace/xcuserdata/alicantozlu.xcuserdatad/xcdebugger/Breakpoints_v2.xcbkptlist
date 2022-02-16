@@ -14,8 +14,8 @@
             filePath = "Pods/ALBusSeatView/ALBusSeatView/Classes/ALSelectionTooltip.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "bgImageView"
             landmarkType = "24">
          </BreakpointContent>
@@ -49,6 +49,22 @@
             startingLineNumber = "229"
             endingLineNumber = "229"
             landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF8BBBF3-D597-4DDA-B7B1-91E89100FB38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BussTicketApp/BusSeatFiles/SeatDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "seatView(_:didSelectAtIndex:seatType:selectionType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
