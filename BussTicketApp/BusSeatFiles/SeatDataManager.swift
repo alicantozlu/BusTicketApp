@@ -16,9 +16,25 @@ class SeatDataManager {
 extension SeatDataManager: ALBusSeatViewDelegate {
     
     func seatView(_ seatView: ALBusSeatView, didSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType, selectionType: ALSelectionType){
-        
+        print("-----------------------------------------------------------------------------------------------------------------------")
+        print("Item  -  \(seatList[indexPath.section][indexPath.item])")
         if(selectedSeatlist.count == 5){
             // SHOW ALERT
+            //print("\(seatList)")
+
+            print("-----------------------------------------------------------------------------------------------------------------------")
+            //print("\(seatList[indexPath.section])")
+           
+            /*print("-----------------------------------------------------------------------------------------------------------------------")
+            print("Row  -  \(seatList[indexPath.section][indexPath.row])")
+            print("-----------------------------------------------------------------------------------------------------------------------")
+            print("Count  -  \(seatList[indexPath.section][indexPath.count])")
+            print("-----------------------------------------------------------------------------------------------------------------------")
+            print("Section  -  \(seatList[indexPath.section][indexPath.section])")
+            print("-----------------------------------------------------------------------------------------------------------------------")
+            print("EndIndex  -  \(seatList[indexPath.section][indexPath.endIndex])")
+            print("-----------------------------------------------------------------------------------------------------------------------")
+            print("startIndex  -  \(seatList[indexPath.section][indexPath.startIndex])")*/
             return
         }
         var stub = seatList[indexPath.section][indexPath.item]

@@ -13,6 +13,8 @@ public class ALBusSeatCell: UICollectionViewCell {
     
     var type: ALBusSeatType = .none
     
+    //var cellIdentifier:Int = 0
+    
     var title: String = "" {
         didSet {
             label.text = title

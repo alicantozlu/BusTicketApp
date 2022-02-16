@@ -62,10 +62,134 @@
             filePath = "BussTicketApp/BusSeatFiles/SeatDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "seatView(_:didSelectAtIndex:seatType:selectionType:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ALBusSeatCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 5a32ebba2cca83d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.title.getter : Swift.String"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 242df013afd1f3a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.title.setter : Swift.String"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 89b2c47935b9d222"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.title.modify : Swift.String"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 3554b52dcbd0eda1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.title.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 766a4a3da3c9ed96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.init(frame: __C.CGRect) -&gt; ALBusSeatView.ALBusSeatCell"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  uuid = "38966E8B-7D77-4C07-B775-55995BBD13C2 - 5d5f0296b7ea65fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ALBusSeatView.ALBusSeatCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ALBusSeatView.ALBusSeatCell&gt;"
+                  moduleName = "ALBusSeatView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alicantozlu/Desktop/BussTicketApp/Pods/ALBusSeatView/ALBusSeatView/Classes/ALSeatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "135">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6ECBE41C-E64D-43F6-8B58-21FD031A5BA6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BussTicketApp/BusSeatFiles/MockSeatCreater.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "SeatStub"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

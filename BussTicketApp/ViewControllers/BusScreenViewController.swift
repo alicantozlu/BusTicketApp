@@ -19,8 +19,7 @@ class BusScreenViewController: UIViewController {
     var dataManager = SeatDataManager()
     
     var travelIndex: Int = 0
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         goBackButton.layer.cornerRadius = 10
@@ -37,16 +36,22 @@ class BusScreenViewController: UIViewController {
         
         yolcuSayisiLabel.text = String(mock.yolcuSayisi)
         bosKoltukLabel.text = String(45 - mock.yolcuSayisi)
-        
+            
+       /* var a = dataManager.selectedSeatlist.count {
+            change{
+                if(a == 5){
+                    print("asdfasdgadsasfasdf")
+                }
+            }
+        }*/
 
     }
     
     @IBAction func buyButtonAction(_ sender: Any) {
        
-        print("\(seatVie)")
+        //print("---->> \(dataManager.selectedSeatlist.)")
         for i in 0...dataManager.selectedSeatlist.count-1{
-             //print("----->> \(dataManager.selectedSeatlist[i].number)")
-            
+             print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
          }
     }
     

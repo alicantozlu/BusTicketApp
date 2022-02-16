@@ -230,6 +230,7 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
                 return cell
         }
         
+        
         let x = Int(seatNumber)!
         // 3 8 13 18 23 28 33 38 43 48 53 58
         if( x >= 2 && x <= 7 ){
