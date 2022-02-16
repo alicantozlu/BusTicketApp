@@ -50,9 +50,9 @@ class BusScreenViewController: UIViewController {
     @IBAction func buyButtonAction(_ sender: Any) {
        
         //print("---->> \(dataManager.selectedSeatlist.)")
-        for i in 0...dataManager.selectedSeatlist.count-1{
+       /* for i in 0...dataManager.selectedSeatlist.count-1{
              print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
-         }
+         }*/
     }
     
     @IBAction func goBackButtonAction(_ sender: Any) {
