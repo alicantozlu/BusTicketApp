@@ -58,12 +58,24 @@ class HomeScreenViewController: UIViewController {
     @IBAction func setDateTodayButton(_ sender: Any) {
         let currentDate = Date()
         datePicker.date = currentDate
+        
+        let dateVal = datePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        date = dateFormatter.string(from: dateVal)
     }
     
     // set datePicker to tomorrow
     @IBAction func setDateTomorrowButton(_ sender: Any) {
         let currentDate = Date()
         datePicker.date = currentDate.tomorrow!
+        
+        let dateVal = datePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        date = dateFormatter.string(from: dateVal)
     }
 
     // Onboarding Screen`e Yonlendir
