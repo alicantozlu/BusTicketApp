@@ -17,6 +17,12 @@ class SeatDataManager {
 extension SeatDataManager: ALBusSeatViewDelegate {
     
     func seatView(_ seatView: ALBusSeatView, didSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType, selectionType: ALSelectionType){
+        
+        if(selectedSeatlist.count == 5){
+            let busScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "busScreenIdentity") as! BusScreenViewController
+            busScreenVC.showAlert()
+            return
+        }
         var stub = seatList[indexPath.section][indexPath.item]
         stub.gender = selectionType == .man ? true : false
         selectedSeatlist.append(stub)

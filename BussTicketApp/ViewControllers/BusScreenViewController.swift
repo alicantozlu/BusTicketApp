@@ -35,5 +35,11 @@ class BusScreenViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func showAlert(){
+        let alertController = UIAlertController(title: "Alım sınırına ulaştınız!", message: "Maksimum bilet alımı '5' ile sınırlandırılmıştır.\nDaha fazla bilgi için lütfen destek ekibine ulaşınız.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
 
 }
