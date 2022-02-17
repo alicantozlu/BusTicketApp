@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var goToStartBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
-
+    
     var slides = [PageModel]()
     
     var currentPage = 0 {
@@ -25,10 +25,12 @@ class ViewController: UIViewController {
                 goToStartBtn.isHidden = false
                 goToStartBtn.setTitle("Skip", for: .normal)
                 
+                nextBtn.isHidden = true
                 nextBtn.setTitleColor(UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1), for: .normal)
                 nextBtn.backgroundColor = UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1)
                 
             } else if (currentPage == slides.count-1){
+                nextBtn.isHidden = false
                 nextBtn.setTitle("Get Started", for: .normal)
                 nextBtn.backgroundColor  = UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1)
                 nextBtn.setTitleColor(UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1), for: .normal)
@@ -37,8 +39,9 @@ class ViewController: UIViewController {
                 goToStartBtn.setTitle("⏎", for: .normal)
                 
             } else {
+                nextBtn.isHidden = true
                 nextBtn.setTitle("Next", for: .normal)
-                nextBtn.backgroundColor = UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 1)
+                nextBtn.backgroundColor = UIColor(red: 219/255, green: 248/255, blue: 255/255, alpha: 0)
                 nextBtn.setTitleColor(UIColor(red: 0/255, green: 31/255, blue: 91/255, alpha: 1), for: .normal)
                 
                 goToStartBtn.isHidden = true
@@ -49,7 +52,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         let page1 = PageModel(title: "To Bus Ticket App!", description: "We are happy to see you.", animationName: "wellcome")
         let page2 = PageModel(title: "Safe & Easy Payment!", description: "Anti-froud technology \n & \n Advanced triple layered security", animationName: "secure")
         let page3 = PageModel(title: "Extra Spacing!", description: "Seat spacing up to 2 meter \n \n Enjoy your spacious travel", animationName: "seats")

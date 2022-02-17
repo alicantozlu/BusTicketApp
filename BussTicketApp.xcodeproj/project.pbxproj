@@ -18,7 +18,6 @@
 		C687000627B6B26000FA6623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000427B6B26000FA6623 /* Main.storyboard */; };
 		C687000927B6B26000FA6623 /* BussTicketApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C687000727B6B26000FA6623 /* BussTicketApp.xcdatamodeld */; };
 		C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C687000A27B6B26200FA6623 /* Assets.xcassets */; };
-		C687000E27B6B26200FA6623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000C27B6B26200FA6623 /* LaunchScreen.storyboard */; };
 		C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001727B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift */; };
 		C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */; };
 		C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687FFFE27B6B26000FA6623 /* AppDelegate.swift */; };
@@ -247,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C687000E27B6B26200FA6623 /* LaunchScreen.storyboard in Resources */,
 				C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */,
 				C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */,
 				C687000627B6B26000FA6623 /* Main.storyboard in Resources */,
