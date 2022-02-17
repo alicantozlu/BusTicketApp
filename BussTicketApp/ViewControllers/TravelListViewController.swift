@@ -21,7 +21,7 @@ class TravelListViewController: UIViewController {
         super.viewDidLoad()
 
         goBackButton.layer.cornerRadius = 10
-        self.tableView.rowHeight = 150;
+        self.tableView.rowHeight = 160
         
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))

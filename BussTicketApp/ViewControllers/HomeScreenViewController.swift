@@ -24,6 +24,9 @@ class HomeScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        
+        let x = UIScreen.main.bounds.size.width
+        fromLebel.placeholder = "\(x)"
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: fromLebel.frame.height - 1, width: fromLebel.frame.width, height: 1.0)
         bottomLine.backgroundColor = UIColor(red: 0, green: 31/255, blue: 91/255, alpha: 1).cgColor

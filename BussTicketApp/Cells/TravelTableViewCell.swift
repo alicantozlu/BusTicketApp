@@ -13,14 +13,12 @@ class TravelTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var travelTimeLabel: UILabel!
-    @IBOutlet var destinationView: UIView!
     @IBOutlet weak var destination1Label: UILabel!
     @IBOutlet weak var destination2Label: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        destinationView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
