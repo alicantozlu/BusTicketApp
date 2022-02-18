@@ -202,8 +202,8 @@
             filePath = "BussTicketApp/ViewControllers/HomeScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,8 +218,8 @@
             filePath = "BussTicketApp/ViewControllers/HomeScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "switchTextButtonAction(_:)"
             landmarkType = "7">
          </BreakpointContent>

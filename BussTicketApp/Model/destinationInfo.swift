@@ -8,11 +8,8 @@
 import UIKit
 
 struct DestinationModel{
-    var image: String
-    var time: String
-    var price: String
-    var travelTime: String
-    var destination1: String
-    var destination2: String
-    var date: String
+    var destination1: String?
+    var destination2: String?
+    var date: String?
+    var travelModel: TravelModel?
 }

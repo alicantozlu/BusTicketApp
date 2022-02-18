@@ -15,7 +15,6 @@ class TravelListViewController: UIViewController {
     var destination1: String = ""
     var destination2: String = ""
     var date: String = ""
-    var hour: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +22,15 @@ class TravelListViewController: UIViewController {
         goBackButton.layer.cornerRadius = 10
         self.tableView.rowHeight = 160
         
+        let urlStr = "https://api.jsonbin.io/b/620fa8864bf50f4b2d01e7be"
+        guard let travelURL = URL(string: urlStr) else { return }
+        //let data = try? Data(contentsOf: userURL)
+        let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL))
+        guard let travels = travelList else { return }
+        for i in 0...20{
+            destinations.append(DestinationModel(destination1: destination1, destination2: destination2, date: date, travelModel: travels[i]))
+        }
+        /*
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "varan", time: "05:00", price: "250₺", travelTime: "7s 00dk", destination1: destination1, destination2: destination2, date: date))
@@ -35,6 +43,7 @@ class TravelListViewController: UIViewController {
         destinations.append(DestinationModel(image: "pamukkale", time: "10:00", price: "300₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "metro", time: "10:00", price: "310₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
         destinations.append(DestinationModel(image: "kamilKoc", time: "10:00", price: "310₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2, date: date))
+        */
         
         tableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
     }

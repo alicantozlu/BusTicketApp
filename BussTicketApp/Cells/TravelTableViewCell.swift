@@ -27,10 +27,10 @@ class TravelTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configure(model: DestinationModel) {
-        self.busImages.image = UIImage(named: model.image)
-        self.timeLabel.text = model.time
-        self.priceLabel.text = model.price
-        self.travelTimeLabel.text = model.travelTime
+        self.busImages.image = UIImage(named: model.travelModel!.image!)
+        self.timeLabel.text = model.travelModel!.time!
+        self.priceLabel.text = model.travelModel!.price!
+        self.travelTimeLabel.text = model.travelModel!.travelTime!
         self.destination1Label.text = model.destination1
         self.destination2Label.text = model.destination2
         self.dateLabel.text = model.date

@@ -23,22 +23,9 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         
-        let x = UIScreen.main.bounds.size.width
-        fromLebel.placeholder = "\(x)"
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: fromLebel.frame.height - 1, width: fromLebel.frame.width, height: 1.0)
-        bottomLine.backgroundColor = UIColor(red: 0, green: 31/255, blue: 91/255, alpha: 1).cgColor
-        fromLebel.borderStyle = UITextField.BorderStyle.none
-        fromLebel.layer.addSublayer(bottomLine)
-        
-        let bottomLine2 = CALayer()
-        bottomLine2.frame = CGRect(x: 0.0, y: toLabel.frame.height - 1, width: toLabel.frame.width, height: 1.0)
-        bottomLine2.backgroundColor = UIColor(red: 0, green: 31/255, blue: 91/255, alpha: 1).cgColor
-        toLabel.borderStyle = UITextField.BorderStyle.none
-        toLabel.layer.addSublayer(bottomLine2)
-        
+        underLine(label: fromLebel)
+        underLine(label: toLabel)
         
         // datePicker arkaplan rengi duzenlenmesi icin
       
@@ -61,6 +48,14 @@ class HomeScreenViewController: UIViewController {
         }
         
         
+    }
+    
+    func underLine(label:UITextField){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: label.frame.height - 1, width: label.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor(red: 0, green: 31/255, blue: 91/255, alpha: 1).cgColor
+        label.borderStyle = UITextField.BorderStyle.none
+        label.layer.addSublayer(bottomLine)
     }
     
     // Nereden Nereye yazilarini yer degistir
@@ -110,30 +105,20 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {
-        //let dateFormatter = DateFormatter()
-            
         guard let from = fromLebel.text else { return }
         guard let to = toLabel.text else { return }
-        //let date = dateFormatter.string(from: datePicker.date)
-        
-        //self.delegate?.sendMessage(from: from, to: to, date: date, hour: hour)
         
         let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
         
         sendVC.destination1 = from
         sendVC.destination2 = to
         sendVC.date = date
-        /*sendVC.hour = hour*/
         
         sendVC.modalPresentationStyle = .fullScreen
         sendVC.modalTransitionStyle = .coverVertical
         present(sendVC, animated: true, completion: nil)
     }
 }
-/*
-protocol MessageDelegate {
-    func sendMessage(from: String,to: String, date: String, hour: String)
-}*/
 
 extension Date {
     var tomorrow: Date? {
