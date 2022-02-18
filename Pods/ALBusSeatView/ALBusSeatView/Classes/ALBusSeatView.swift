@@ -204,9 +204,7 @@ public class ALBusSeatView: UIView {
         }
         
         // Bus front image setup
-        collectionView.register(ALBusSeatViewHeaderView.self,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: headerID)
+        collectionView.register(ALBusSeatViewHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
     }
     
     private func applyConfigs() {
@@ -283,6 +281,10 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.type = seatType
         cell.label.font = config.seatNumberFont
         cell.label.textColor = config.seatNumberColor
+        
+        print("SeatType \(seatType)")
+        
+     //   if(seatType == .soldMan && )
         
         switch seatType {
         case .empty:

@@ -29,7 +29,8 @@ class BusScreenViewController: UIViewController {
         seatView.dataSource = dataManager
         
         let mock = MockSeatCreater()
-        let first = mock.create(count: 75)
+        var first = mock.create(count: 75)
+        
         //let second = mock.create(count: 45)
         dataManager.seatList = [first/*,second*/]
         seatView?.reload()
