@@ -10,9 +10,9 @@ import Foundation
 struct SeatStub {
     let id: String
     var number: Int
-    let salable: Bool
+    var salable: Bool
     var gender: Bool
-    let hall: Bool
+    var hall: Bool
     var cellIdentifier:String
 }
 
@@ -84,10 +84,23 @@ class MockSeatCreater {
                 hall: isHall,
                 cellIdentifier: NewCellIdentifier)
         
+            
+            // 2li koltuklarda tekli oturmalarin onune gecmek icin
+            /*if(list.count >= 6){
+                for i in 5...list.count-1{
+                    if(i % 5 == 0 && (list[i-1].salable == false || list[i].salable == false)){
+                        list[i].salable = false
+                    }else{
+                        list[i].salable = true
+                    }
+                }
+            }*/
+            
+            
             if(stub.salable == false && stub.hall == false){
                 yolcuSayisi += 1
             }
-            
+
             list.append(stub)
         }
         return list
