@@ -26,6 +26,11 @@ class HomeScreenViewController: UIViewController {
         
         underLine(label: fromLebel)
         underLine(label: toLabel)
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        date = dateFormatter.string(from: Date())
         
         // datePicker arkaplan rengi duzenlenmesi icin
       
@@ -67,26 +72,18 @@ class HomeScreenViewController: UIViewController {
     
     // set datePicker to today
     @IBAction func setDateTodayButton(_ sender: Any) {
-        let currentDate = Date()
-        datePicker.date = currentDate
-        
-        let dateVal = datePicker.date
+        datePicker.date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        date = dateFormatter.string(from: dateVal)
+        date = dateFormatter.string(from: Date())
     }
     
     // set datePicker to tomorrow
     @IBAction func setDateTomorrowButton(_ sender: Any) {
-        let currentDate = Date()
-        datePicker.date = currentDate.tomorrow!
-        
-        let dateVal = datePicker.date
+        datePicker.date = Date().tomorrow!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        date = dateFormatter.string(from: dateVal)
+        date = dateFormatter.string(from: Date().tomorrow!)
     }
 
     // Onboarding Screen`e Yonlendir
@@ -97,16 +94,22 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func datePickerVal(_ sender: Any) {
-        let dateVal = datePicker.date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        date = dateFormatter.string(from: dateVal)
+        date = dateFormatter.string(from: datePicker.date)
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {
         guard let from = fromLebel.text else { return }
         guard let to = toLabel.text else { return }
+        
+        if(from == "" || to == ""){
+            let alertController = UIAlertController(title: "Hata!", message: "Lütfen boş yerleri doldurunuz.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         
         let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
         

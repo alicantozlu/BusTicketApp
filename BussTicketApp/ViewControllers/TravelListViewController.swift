@@ -27,7 +27,7 @@ class TravelListViewController: UIViewController {
         //let data = try? Data(contentsOf: userURL)
         let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL))
         guard let travels = travelList else { return }
-        for i in 0...20{
+        for i in 0...travels.count-1{
             destinations.append(DestinationModel(destination1: destination1, destination2: destination2, date: date, travelModel: travels[i]))
         }
         /*
