@@ -17,9 +17,10 @@ class BusScreenViewController: UIViewController {
     @IBOutlet var buyButton: UIButton!
     
     var dataManager = SeatDataManager()
-    
     var travelIndex: Int = 0
-
+    var first = [SeatStub]()
+    var yolcuSayisi:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         goBackButton.layer.cornerRadius = 10
@@ -29,14 +30,14 @@ class BusScreenViewController: UIViewController {
         seatView.dataSource = dataManager
         
         let mock = MockSeatCreater()
-        var first = mock.create(count: 75)
+        first = mock.create(count: 75)
         
         //let second = mock.create(count: 45)
         dataManager.seatList = [first/*,second*/]
         seatView?.reload()
         
-        yolcuSayisiLabel.text = String(mock.yolcuSayisi)
-        bosKoltukLabel.text = String(45 - mock.yolcuSayisi)
+        yolcuHesapla()
+    
             
        /* var a = dataManager.selectedSeatlist.count {
             change{
@@ -46,6 +47,17 @@ class BusScreenViewController: UIViewController {
             }
         }*/
 
+    }
+    
+    //yolcusayisi ve kalan bos koltuk sayisi hesapla
+    func yolcuHesapla(){
+        for i in 0...first.count-1{
+            if(first[i].salable == false && first[i].hall == false){
+                yolcuSayisi += 1
+            }
+        }
+        yolcuSayisiLabel.text = String(yolcuSayisi)
+        bosKoltukLabel.text = String(45 - yolcuSayisi)
     }
     
     @IBAction func buyButtonAction(_ sender: Any) {

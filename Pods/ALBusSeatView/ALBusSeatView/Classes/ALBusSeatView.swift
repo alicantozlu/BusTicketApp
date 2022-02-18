@@ -282,7 +282,7 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.label.font = config.seatNumberFont
         cell.label.textColor = config.seatNumberColor
         
-        print("SeatType \(seatType)")
+        //print("SeatType \(seatType)")
         
      //   if(seatType == .soldMan && )
         

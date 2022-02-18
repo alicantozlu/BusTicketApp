@@ -179,22 +179,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6ECBE41C-E64D-43F6-8B58-21FD031A5BA6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BussTicketApp/BusSeatFiles/MockSeatCreater.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "SeatStub"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "383E7F53-BC4F-47A6-BD5B-CE216291F4A5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -234,8 +218,8 @@
             filePath = "BussTicketApp/BusSeatFiles/MockSeatCreater.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "create(count:)"
             landmarkType = "7">
          </BreakpointContent>

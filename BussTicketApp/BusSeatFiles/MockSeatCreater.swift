@@ -18,7 +18,6 @@ struct SeatStub {
 
 class MockSeatCreater {
     
-    var yolcuSayisi:Int = 0
     var x:Int = 0
     func create(count: Int) -> [SeatStub] {
         
@@ -86,19 +85,13 @@ class MockSeatCreater {
         
             
             // 2li koltuklarda tekli oturmalarin onune gecmek icin
-            /*if(list.count >= 6){
-                for i in 5...list.count-1{
-                    if(i % 5 == 0 && (list[i-1].salable == false || list[i].salable == false)){
-                        list[i].salable = false
-                    }else{
-                        list[i].salable = true
-                    }
+            if(list.count > 1 && list.count % 5 == 0){
+                print("\(list) \n")
+                if(list[list.count-2].salable == false){
+                    list[list.count-1].salable = false
+                }else{
+                    list[list.count-1].salable = true
                 }
-            }*/
-            
-            
-            if(stub.salable == false && stub.hall == false){
-                yolcuSayisi += 1
             }
 
             list.append(stub)
