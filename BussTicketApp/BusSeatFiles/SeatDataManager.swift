@@ -16,6 +16,7 @@ class SeatDataManager {
 extension SeatDataManager: ALBusSeatViewDelegate {
     
     func seatView(_ seatView: ALBusSeatView, didSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType, selectionType: ALSelectionType){
+        
         if(selectedSeatlist.count == 5){
             NotificationCenter.default.post(name: NSNotification.Name("sendData"), object: nil, userInfo: nil)
             return
@@ -24,12 +25,18 @@ extension SeatDataManager: ALBusSeatViewDelegate {
         var stub = seatList[indexPath.section][indexPath.item]
         stub.gender = selectionType == .man ? true : false
         selectedSeatlist.append(stub)
+        
+        NotificationCenter.default.post(name: NSNotification.Name("sendData"), object: nil, userInfo: nil)
+        
         seatView.reload()
     }
     
     func seatView(_ seatView: ALBusSeatView, deSelectAtIndex indexPath: IndexPath, seatType: ALBusSeatType) {
         let stub = seatList[indexPath.section][indexPath.item]
         selectedSeatlist.removeAll(where: { $0.id == stub.id })
+        
+        NotificationCenter.default.post(name: NSNotification.Name("sendData"), object: nil, userInfo: nil)
+        
         seatView.reload()
     }
 }

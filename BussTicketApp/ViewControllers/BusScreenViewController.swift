@@ -15,24 +15,28 @@ class BusScreenViewController: UIViewController {
     @IBOutlet var seatView: ALBusSeatView!
     @IBOutlet var buyButton: UIButton!
     @IBOutlet var swipeArrowView: AnimationView!
-    @IBOutlet var setTest: UILabel!
+    @IBOutlet var usersTableView: UITableView!
     
     var dataManager = SeatDataManager()
     var travelIndex: Int = 0
     var first = [SeatStub]()
-    var yolcuSayisi:Int = 0
+    var selectedSeatCount:Int = 0
     
     @objc func changeImage(){
-        self.yolcuSayisi = dataManager.selectedSeatlist.count
-        
-        let alertController = UIAlertController(title: "Alım sınırına ulaştınız!", message: "Maksimum bilet alımı '5' ile sınırlandırılmıştır.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+        self.selectedSeatCount = dataManager.selectedSeatlist.count
+        usersTableView.reloadData()
+        if(self.selectedSeatCount == 5){
+            let alertController = UIAlertController(title: "Uyarı!", message: "Maksimum bilet alımı '5' ile sınırlandırılmıştır.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.usersTableView.rowHeight = 150
         
         let notificationCenter: NotificationCenter = .default
                 notificationCenter.addObserver(self, selector: #selector(changeImage), name: .sendDataNotification, object: nil)
@@ -51,7 +55,7 @@ class BusScreenViewController: UIViewController {
         dataManager.seatList = [first/*,second*/]
         seatView?.reload()
         
-        yolcuHesapla()
+        usersTableView.register(UINib(nibName: "BusScreenUsersViewCell", bundle: nil), forCellReuseIdentifier: "usersCellIdentifier")
     }
     
     static func countAlert(){
@@ -71,15 +75,6 @@ class BusScreenViewController: UIViewController {
         }
     }
     
-    //yolcusayisi ve kalan bos koltuk sayisi hesapla
-    func yolcuHesapla(){
-        for i in 0...first.count-1{
-            if(first[i].salable == false && first[i].hall == false){
-                yolcuSayisi += 1
-            }
-        }
-    }
-    
     @IBAction func buyButtonAction(_ sender: Any) {
         print("---->> \(dataManager.selectedSeatlist)")
         /*for i in 0...dataManager.selectedSeatlist.count-1{
@@ -90,4 +85,17 @@ class BusScreenViewController: UIViewController {
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.selectedSeatCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! BusScreenUsersViewCell
+        return cell
+    }
+    
+    
 }
