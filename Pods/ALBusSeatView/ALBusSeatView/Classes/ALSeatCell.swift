@@ -12,9 +12,6 @@ import UIKit
 public class ALBusSeatCell: UICollectionViewCell {
     
     var type: ALBusSeatType = .none
-    
-    //var cellIdentifier:Int = 0
-    
     var title: String = "" {
         didSet {
             label.text = title
@@ -39,7 +36,6 @@ public class ALBusSeatCell: UICollectionViewCell {
         return lbl
     }()
     
-    
     /// Initializes and returns a newly allocated view object with the specified frame rectangle.
     /// - Parameter frame: Frame of Seat
     public override init(frame: CGRect) {
@@ -58,7 +54,6 @@ public class ALBusSeatCell: UICollectionViewCell {
         bringSubviewToFront(removeImageView)
     }
     
-    
     /// Lays out subviews
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -66,7 +61,6 @@ public class ALBusSeatCell: UICollectionViewCell {
         label.frame = coverView.bounds
         removeImageView.frame = CGRect(x: coverView.frame.width-8, y: 0, width: 15, height: 15)
     }
-    
     
     /// Use to clean up view for reuse
     public override func prepareForReuse() {

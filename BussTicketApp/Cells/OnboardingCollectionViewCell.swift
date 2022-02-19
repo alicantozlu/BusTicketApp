@@ -16,7 +16,6 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     var actionButtonDidTap: (() -> Void)?
     
-    
     func setup(slide: PageModel){
         titleLabel.text = slide.title
         descriptionLabel.text = slide.description

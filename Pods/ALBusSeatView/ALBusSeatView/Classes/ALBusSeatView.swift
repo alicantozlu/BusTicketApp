@@ -137,7 +137,6 @@ public class ALBusSeatView: UIView {
     /// Object as delegate for BusSeatView
     public var delegate: ALBusSeatViewDelegate?
     
-    
     /// Initializes and return ALBusSeatView with configuration
     /// - Parameter config: The object that used for customization
     public init(withConfig config: ALBusSeatViewConfig) {
@@ -157,7 +156,6 @@ public class ALBusSeatView: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
     
     /// Reloads the all data for seatView
     public func reload(scrollToLeft: Bool = false, animated: Bool = false) {
@@ -182,7 +180,6 @@ public class ALBusSeatView: UIView {
         let infoFrame = CGRect(x: infoX, y: 0, width: infoWidth, height: collectionView.frame.height)
         infoLabel.frame = infoFrame
     }
-    
     
     // MARK: - Private
     private func commonInit() {
@@ -227,7 +224,6 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
              var seatNumber = dataSource?.seatView(self, seatNumberForIndex: indexPath) else {
                 return cell
         }
-        
         
         let x = Int(seatNumber)!
         // 3 8 13 18 23 28 33 38 43 48 53 58
@@ -281,10 +277,6 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.type = seatType
         cell.label.font = config.seatNumberFont
         cell.label.textColor = config.seatNumberColor
-        
-        //print("SeatType \(seatType)")
-        
-     //   if(seatType == .soldMan && )
         
         switch seatType {
         case .empty:
@@ -416,7 +408,6 @@ extension ALBusSeatView:  UICollectionViewDelegate, UICollectionViewDataSource, 
 // MARK: - Tooltip
 extension ALBusSeatView {
     
-    
     /// Reposition the scroll view according to selected seatview to make tooltip more visible and selectable
     /// - Parameter forCell: Selected seatview to arrange scroll
     func repositionScrollView(forCell: UIView) {
@@ -449,7 +440,6 @@ extension ALBusSeatView {
         }
     }
     
-    
     /// Display tooltip
     /// - Parameters:
     ///   - fromCell: To arrange tooltip position for this seatView
@@ -466,6 +456,18 @@ extension ALBusSeatView {
             self.delegate?.seatView(self, didSelectAtIndex: indexPath, seatType: fromCell.type, selectionType: type)
             self.tooltip.hide()
         }
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         tooltip.show(from: collectionView, origin: converted)
     }
     
