@@ -9,18 +9,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="usersCellIdentifier" rowHeight="250" id="KGk-i7-Jjw" customClass="BusScreenUsersViewCell" customModule="BussTicketApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="usersCellIdentifier" rowHeight="251" id="KGk-i7-Jjw" customClass="BusScreenUsersViewCell" customModule="BussTicketApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="BusScreenUsersViewCell" customModule="BussTicketApp" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-Zj-J8h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-fc-dqL">
-                                <rect key="frame" x="16" y="15" width="382" height="230"/>
+                                <rect key="frame" x="16" y="16" width="382" height="225"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Soyad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ozs-cc-5zt">
                                         <rect key="frame" x="13" y="15" width="85" height="25"/>
@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="trailing" secondItem="K4E-53-OvK" secondAttribute="trailing" constant="18" id="YQU-xs-njf"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="top" secondItem="8Zc-Em-ORg" secondAttribute="bottom" id="aVL-t2-pbs"/>
                                     <constraint firstItem="2Ju-Td-1aC" firstAttribute="top" secondItem="2Ld-DG-r6z" secondAttribute="bottom" id="dX3-CY-Grh"/>
-                                    <constraint firstAttribute="height" constant="230" id="maY-Ls-C7T"/>
+                                    <constraint firstAttribute="height" constant="225" id="maY-Ls-C7T"/>
                                     <constraint firstAttribute="width" constant="382" id="nAR-YN-cTR"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="centerX" secondItem="K4E-53-OvK" secondAttribute="centerX" id="ufJ-nM-vla"/>
                                     <constraint firstItem="2Ju-Td-1aC" firstAttribute="trailing" secondItem="K4E-53-OvK" secondAttribute="trailing" id="zm5-g8-EEn"/>
@@ -99,7 +99,7 @@
                             <constraint firstAttribute="height" constant="267" id="FcT-Zz-euJ"/>
                             <constraint firstAttribute="width" constant="414" id="MEe-NE-Mir"/>
                             <constraint firstItem="8uB-fc-dqL" firstAttribute="centerX" secondItem="GWc-Zj-J8h" secondAttribute="centerX" id="U4G-dm-ser"/>
-                            <constraint firstItem="8uB-fc-dqL" firstAttribute="top" secondItem="GWc-Zj-J8h" secondAttribute="top" constant="15" id="iIb-hp-GXi"/>
+                            <constraint firstItem="8uB-fc-dqL" firstAttribute="top" secondItem="GWc-Zj-J8h" secondAttribute="top" constant="16" id="iIb-hp-GXi"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -116,7 +116,7 @@
                 <outlet property="idNoTextField" destination="zfS-RM-XpX" id="R2n-dB-RGG"/>
                 <outlet property="nameSurnameTextField" destination="K4E-53-OvK" id="bn7-oe-3md"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="160.04464285714286"/>
+            <point key="canvasLocation" x="131.8840579710145" y="159.70982142857142"/>
         </tableViewCell>
     </objects>
 </document>

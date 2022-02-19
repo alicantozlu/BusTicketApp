@@ -36,7 +36,7 @@ class BusScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.usersTableView.rowHeight = 260
+        self.usersTableView.rowHeight = 253
         
         let notificationCenter: NotificationCenter = .default
                 notificationCenter.addObserver(self, selector: #selector(changeImage), name: .sendDataNotification, object: nil)
@@ -96,7 +96,7 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! BusScreenUsersViewCell
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
-        cell.hesCodeTextField.underLine()
+        //cell.hesCodeTextField.underLine()
         return cell
     }
 }
