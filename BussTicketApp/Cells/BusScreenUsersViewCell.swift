@@ -9,9 +9,13 @@ import UIKit
 
 class BusScreenUsersViewCell: UITableViewCell {
 
+    @IBOutlet var nameSurnameTextField: UITextField!
+    @IBOutlet var idNoTextField: UITextField!
+    @IBOutlet var hesCodeTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

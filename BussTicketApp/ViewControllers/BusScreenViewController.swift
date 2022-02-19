@@ -26,7 +26,7 @@ class BusScreenViewController: UIViewController {
         self.selectedSeatCount = dataManager.selectedSeatlist.count
         usersTableView.reloadData()
         if(self.selectedSeatCount == 5){
-            let alertController = UIAlertController(title: "Uyarı!", message: "Maksimum bilet alımı '5' ile sınırlandırılmıştır.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Uyarı!", message: "Otobüs firması tek seferde en fazla 5 koltuğun satılmasına izin veriyor.", preferredStyle: .alert)
             let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
             alertController.addAction(action)
             present(alertController, animated: true, completion: nil)
@@ -36,7 +36,7 @@ class BusScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.usersTableView.rowHeight = 150
+        self.usersTableView.rowHeight = 260
         
         let notificationCenter: NotificationCenter = .default
                 notificationCenter.addObserver(self, selector: #selector(changeImage), name: .sendDataNotification, object: nil)
@@ -94,8 +94,22 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! BusScreenUsersViewCell
+        cell.nameSurnameTextField.underLine()
+        cell.idNoTextField.underLine()
+        cell.hesCodeTextField.underLine()
         return cell
     }
-    
-    
 }
+
+/*extension UIView {
+    func dropShadow() {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 1
+        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+    }
+}*/

@@ -24,9 +24,12 @@ class HomeScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        underLine(label: fromLebel)
+        fromLebel.underLine()
+        toLabel.underLine()
+        
+        /*underLine(label: fromLebel)
         underLine(label: toLabel)
-
+*/
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         
@@ -55,13 +58,7 @@ class HomeScreenViewController: UIViewController {
         
     }
     
-    func underLine(label:UITextField){
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: label.frame.height - 1, width: label.frame.width, height: 1.0)
-        bottomLine.backgroundColor = UIColor(red: 0, green: 31/255, blue: 91/255, alpha: 1).cgColor
-        label.borderStyle = UITextField.BorderStyle.none
-        label.layer.addSublayer(bottomLine)
-    }
+
     
     // Nereden Nereye yazilarini yer degistir
     @IBAction func switchTextButtonAction(_ sender: Any) {
@@ -123,12 +120,7 @@ class HomeScreenViewController: UIViewController {
     }
 }
 
-extension Date {
-    var tomorrow: Date? {
-        return Calendar.current.date(byAdding: .day, value: 1, to: self)
-    }
-}
-
+/*
 class ColoredDatePicker: UIDatePicker {
     var changed = false
     override func addSubview(_ view: UIView) {
@@ -138,4 +130,4 @@ class ColoredDatePicker: UIDatePicker {
         }
         super.addSubview(view)
     }
-}
+}*/
