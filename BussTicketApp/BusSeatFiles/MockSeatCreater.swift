@@ -13,7 +13,7 @@ struct SeatStub {
     var salable: Bool
     var gender: Bool
     var hall: Bool
-    var cellIdentifier:String
+    var cellIdentifier:String // secili koltuklarin indexlerini duzgun alabilmek icin
 }
 
 class MockSeatCreater {
@@ -86,7 +86,7 @@ class MockSeatCreater {
             
             // 2li koltuklarda tekli oturmalarin onune gecmek icin
             if(list.count > 1 && list.count % 5 == 0){
-                print("\(list) \n")
+                //print("\(list) \n")
                 if(list[list.count-2].salable == false){
                     list[list.count-1].salable = false
                 }else{

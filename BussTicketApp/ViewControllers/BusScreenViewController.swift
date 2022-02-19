@@ -24,7 +24,7 @@ class BusScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         goBackButton.layer.cornerRadius = 10
-
+        
         seatView.config = SeatConfig()
         seatView.delegate = dataManager
         seatView.dataSource = dataManager
@@ -62,8 +62,10 @@ class BusScreenViewController: UIViewController {
     
     @IBAction func buyButtonAction(_ sender: Any) {
        
-        //print("---->> \(dataManager.selectedSeatlist.)")
-       /* for i in 0...dataManager.selectedSeatlist.count-1{
+        
+        
+        print("---->> \(dataManager.selectedSeatlist)")
+        /*for i in 0...dataManager.selectedSeatlist.count-1{
              print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
          }*/
     }

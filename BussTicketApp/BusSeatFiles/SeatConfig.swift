@@ -41,7 +41,7 @@ class SeatConfig: ALBusSeatViewConfig {
         
         //Bus Front Section
         busFrontImage = UIImage(named: "bus-front-view")
-        busFrontImageWidth = 120
+        busFrontImageWidth = 100
         
         //Bus Floor Section
         floorSeperatorWidth = 60
