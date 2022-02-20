@@ -748,7 +748,7 @@
         <image name="cityEdited" width="910" height="599"/>
         <image name="cityFooter" width="909" height="486"/>
         <image name="dat1" width="65" height="512"/>
-        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
     </resources>
 </document>

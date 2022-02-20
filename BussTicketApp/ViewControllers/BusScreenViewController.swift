@@ -96,7 +96,7 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! BusScreenUsersViewCell
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
-        //cell.hesCodeTextField.underLine()
+        cell.hesCodeTextField.borderStyle = UITextField.BorderStyle.none
         return cell
     }
 }
