@@ -8,8 +8,9 @@
 import Foundation
 
 struct Saat {
-    var saat: Int = 0
-    var dakika: Int = 0
+    var time: String = ""
+    /*var saat: Int = 0
+    var dakika: Int = 0*/
     
     func yazdir(){
         // Saat:Dakika formatinda yazdirilacak

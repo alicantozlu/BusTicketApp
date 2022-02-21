@@ -12,6 +12,7 @@ class BusScreenUsersViewCell: UITableViewCell {
     @IBOutlet var nameSurnameTextField: UITextField!
     @IBOutlet var idNoTextField: UITextField!
     @IBOutlet var hesCodeTextField: UITextField!
+    @IBOutlet var seatNumberLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

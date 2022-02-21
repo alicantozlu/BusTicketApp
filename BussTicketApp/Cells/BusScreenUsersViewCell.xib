@@ -67,6 +67,31 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5U-N7-qyd">
+                                        <rect key="frame" x="317" y="10" width="35" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWw-ZF-zzk">
+                                                <rect key="frame" x="-3" y="-3" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.081125520170000007" green="0.79365754129999999" blue="0.50097393990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="1KE-R9-lzc"/>
+                                            <constraint firstAttribute="width" constant="35" id="JGO-bc-ItI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -75,6 +100,7 @@
                                     <constraint firstItem="K4E-53-OvK" firstAttribute="leading" secondItem="8uB-fc-dqL" secondAttribute="leading" constant="13" id="8Qi-zO-FlR"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="trailing" secondItem="K4E-53-OvK" secondAttribute="trailing" id="CMX-ra-kEZ"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="leading" secondItem="K4E-53-OvK" secondAttribute="leading" id="Otl-MC-wif"/>
+                                    <constraint firstItem="g5U-N7-qyd" firstAttribute="leading" secondItem="ozs-cc-5zt" secondAttribute="trailing" constant="219" id="Tlc-y0-h5S"/>
                                     <constraint firstItem="2Ju-Td-1aC" firstAttribute="centerX" secondItem="K4E-53-OvK" secondAttribute="centerX" id="UO8-kS-Pbu"/>
                                     <constraint firstAttribute="trailing" secondItem="K4E-53-OvK" secondAttribute="trailing" constant="18" id="YQU-xs-njf"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="top" secondItem="8Zc-Em-ORg" secondAttribute="bottom" id="aVL-t2-pbs"/>
@@ -82,6 +108,7 @@
                                     <constraint firstAttribute="height" constant="225" id="maY-Ls-C7T"/>
                                     <constraint firstAttribute="width" constant="382" id="nAR-YN-cTR"/>
                                     <constraint firstItem="zfS-RM-XpX" firstAttribute="centerX" secondItem="K4E-53-OvK" secondAttribute="centerX" id="ufJ-nM-vla"/>
+                                    <constraint firstItem="g5U-N7-qyd" firstAttribute="centerY" secondItem="ozs-cc-5zt" secondAttribute="centerY" id="xp0-eW-g0L"/>
                                     <constraint firstItem="2Ju-Td-1aC" firstAttribute="trailing" secondItem="K4E-53-OvK" secondAttribute="trailing" id="zm5-g8-EEn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -115,6 +142,7 @@
                 <outlet property="hesCodeTextField" destination="2Ju-Td-1aC" id="R8f-IF-Dbl"/>
                 <outlet property="idNoTextField" destination="zfS-RM-XpX" id="R2n-dB-RGG"/>
                 <outlet property="nameSurnameTextField" destination="K4E-53-OvK" id="bn7-oe-3md"/>
+                <outlet property="seatNumberLabel" destination="aWw-ZF-zzk" id="uJe-RP-0Kf"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="159.70982142857142"/>
         </tableViewCell>
