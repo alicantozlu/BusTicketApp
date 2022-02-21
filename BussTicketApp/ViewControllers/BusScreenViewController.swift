@@ -16,6 +16,7 @@ class BusScreenViewController: UIViewController {
     @IBOutlet var buyButton: UIButton!
     @IBOutlet var swipeArrowView: AnimationView!
     @IBOutlet var usersTableView: UITableView!
+    @IBOutlet var ticketListCollectionView: UITableView!
     
     var dataManager = SeatDataManager()
     var travelIndex: Int = 0
@@ -39,7 +40,7 @@ class BusScreenViewController: UIViewController {
         self.usersTableView.rowHeight = 253
         
         let notificationCenter: NotificationCenter = .default
-                notificationCenter.addObserver(self, selector: #selector(changeImage), name: .sendDataNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(changeImage), name: .sendDataNotification, object: nil)
         
         configSwipeArrow()
         
@@ -58,10 +59,6 @@ class BusScreenViewController: UIViewController {
         usersTableView.register(UINib(nibName: "BusScreenUsersViewCell", bundle: nil), forCellReuseIdentifier: "usersCellIdentifier")
     }
     
-    static func countAlert(){
-        
-    }
-    
     //Kaydirma animasyonu
     func configSwipeArrow(){
         let animation = Animation.named("arrow2")
@@ -76,10 +73,31 @@ class BusScreenViewController: UIViewController {
     }
     
     @IBAction func buyButtonAction(_ sender: Any) {
-        print("---->> \(dataManager.selectedSeatlist)")
-        /*for i in 0...dataManager.selectedSeatlist.count-1{
-             print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
-         }*/
+        if dataManager.selectedSeatlist.isEmpty{
+            let alertController = UIAlertController(title: "Uyarı!", message: "Lütfen koltuk seçiniz.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        var ticketsTemp = [UserModel]()
+        for i in 0...dataManager.selectedSeatlist.count-1{
+             //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
+            let ndx = IndexPath(row:(3), section: 0)
+            let cell = ticketListCollectionView.cellForRow(at:ndx) as! BusScreenUsersViewCell
+            let userName = cell.nameSurnameTextField.text!
+            let userID = cell.idNoTextField.text!
+            let userHES = cell.hesCodeTextField.text!
+            let userSeatNum = String(dataManager.selectedSeatlist[i].cellIdentifier)
+        
+            ticketsTemp.append(UserModel(nameSurname: userName, idNumber: userID, hesCode: userHES, seatNumber: userSeatNum))
+        }
+        let ticketVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ticketVcIdentifier") as! TicketsViewController
+        ticketVC.tickets = ticketsTemp
+        ticketVC.modalTransitionStyle = .crossDissolve
+        ticketVC.modalPresentationStyle = .fullScreen
+        present(ticketVC, animated: true, completion: nil)
     }
     
     @IBAction func goBackButtonAction(_ sender: Any) {
@@ -97,19 +115,7 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
         cell.hesCodeTextField.borderStyle = UITextField.BorderStyle.none
+        cell.seatNumberLabel.text = String(dataManager.selectedSeatlist[indexPath.row].cellIdentifier)
         return cell
     }
 }
-
-/*extension UIView {
-    func dropShadow() {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: -1, height: 1)
-        layer.shadowRadius = 1
-        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
-    }
-}*/

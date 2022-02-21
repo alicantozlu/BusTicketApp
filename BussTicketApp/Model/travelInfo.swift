@@ -12,4 +12,5 @@ struct TravelModel: Decodable{
     var time: String?
     var price: String?
     var travelTime: String?
+    var endTime: String?
 }

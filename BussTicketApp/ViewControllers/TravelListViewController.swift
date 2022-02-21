@@ -8,68 +8,52 @@
 import UIKit
 
 class TravelListViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var travelListTableView: UITableView!
     @IBOutlet var goBackButton: UIButton!
     
     var destinations = [DestinationModel]()
     var destination1: String = ""
     var destination2: String = ""
     var date: String = ""
+    var travels = [TravelModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         goBackButton.layer.cornerRadius = 10
-        self.tableView.rowHeight = 160
+        self.travelListTableView.rowHeight = 160
         
-        let urlStr = "https://api.jsonbin.io/b/620fa8864bf50f4b2d01e7be"
+        let urlStr = "https://api.jsonbin.io/b/620fa8864bf50f4b2d01e7be/1"
         guard let travelURL = URL(string: urlStr) else { return }
         //let data = try? Data(contentsOf: userURL)
         let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL))
-        guard let travels = travelList else { return }
+        travels = travelList!
         for i in 0...travels.count-1{
             destinations.append(DestinationModel(destination1: destination1, destination2: destination2, date: date, travelModel: travels[i]))
         }
-        /*
-        destinations.append(DestinationModel(image: "kamilKoc", time: "00:00", price: "260₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "kamilKoc", time: "00:30", price: "250₺", travelTime: "5s 00dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "varan", time: "05:00", price: "250₺", travelTime: "7s 00dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "pamukkale", time: "05:00", price: "255₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "metro", time: "06:30", price: "260₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "metro", time: "07:00", price: "270₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "pamukkale", time: "08:00", price: "280₺", travelTime: "6s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "varan", time: "08:00", price: "300₺", travelTime: "8s 00dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "kamilKoc", time: "08:30", price: "300₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "pamukkale", time: "10:00", price: "300₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "metro", time: "10:00", price: "310₺", travelTime: "7s 30dk", destination1: destination1, destination2: destination2, date: date))
-        destinations.append(DestinationModel(image: "kamilKoc", time: "10:00", price: "310₺", travelTime: "6s 00dk", destination1: destination1, destination2: destination2, date: date))
-        */
-        
-        tableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
+       
+        travelListTableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
     }
+    
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        HomeScreenViewController.newTicket.saat.time = destinations[indexPath.row].travelModel?.time! ?? "-"
+        HomeScreenViewController.newTicket.endTime = destinations[indexPath.row].travelModel?.endTime! ?? "-"
+        HomeScreenViewController.newTicket.length = destinations[indexPath.row].travelModel?.travelTime! ?? "-"
+        HomeScreenViewController.newTicket.price = destinations[indexPath.row].travelModel?.price! ?? "-"
+        
         let busScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "busScreenIdentity") as! BusScreenViewController
         busScreenVC.modalPresentationStyle = .fullScreen
         busScreenVC.modalTransitionStyle = .flipHorizontal
-
         present(busScreenVC, animated: true, completion: nil)
     }
-    
 }
 
-extension TravelListViewController: UITableViewDelegate, UITableViewDataSource/*, MessageDelegate*/{
-    /*func sendMessage(from: String, to: String, date: String, hour: String) {
-        self.destination1 = from
-        self.destination2 = to
-        self.date = date
-        self.hour = hour
-    }*/
-    
-    
+extension TravelListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "travelCellTest") as! TravelTableViewCell
         cell.configure(model: destinations[indexPath.row])

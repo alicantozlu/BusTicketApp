@@ -20,6 +20,10 @@
 		C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FD27B92E7100C0CE62 /* Passanger.swift */; };
 		C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FF27B92E7C00C0CE62 /* Date.swift */; };
 		C65AA20227B92E8B00C0CE62 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA20127B92E8B00C0CE62 /* Hour.swift */; };
+		C668E89C27C30A0400D3E10F /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668E89A27C30A0400D3E10F /* TicketTableViewCell.swift */; };
+		C668E89D27C30A0400D3E10F /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C668E89B27C30A0400D3E10F /* TicketTableViewCell.xib */; };
+		C668E89F27C30E4100D3E10F /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668E89E27C30E4100D3E10F /* TicketsViewController.swift */; };
+		C668E8A127C3492100D3E10F /* ticketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668E8A027C3492100D3E10F /* ticketInfo.swift */; };
 		C687000127B6B26000FA6623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000027B6B26000FA6623 /* SceneDelegate.swift */; };
 		C687000327B6B26000FA6623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687000227B6B26000FA6623 /* ViewController.swift */; };
 		C687000627B6B26000FA6623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C687000427B6B26000FA6623 /* Main.storyboard */; };
@@ -54,6 +58,10 @@
 		C65AA1FD27B92E7100C0CE62 /* Passanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passanger.swift; sourceTree = "<group>"; };
 		C65AA1FF27B92E7C00C0CE62 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C65AA20127B92E8B00C0CE62 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		C668E89A27C30A0400D3E10F /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		C668E89B27C30A0400D3E10F /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		C668E89E27C30E4100D3E10F /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		C668E8A027C3492100D3E10F /* ticketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketInfo.swift; sourceTree = "<group>"; };
 		C687000027B6B26000FA6623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C687000227B6B26000FA6623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C687000527B6B26000FA6623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 				C602095E27B86D6D00AD6BDF /* HomeScreenViewController.swift */,
 				C697CB8027B9702500442A2A /* TravelListViewController.swift */,
 				C6FED6C027BBEDA300916158 /* BusScreenViewController.swift */,
+				C668E89E27C30E4100D3E10F /* TicketsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -128,14 +137,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		C687001527B6D9DA00FA6623 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		C687001627B6D9E200FA6623 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +145,8 @@
 				C697CB9027B9DDB200442A2A /* TravelTableViewCell.xib */,
 				C632B67327C09BA9006D5B31 /* BusScreenUsersViewCell.swift */,
 				C632B67427C09BA9006D5B31 /* BusScreenUsersViewCell.xib */,
+				C668E89A27C30A0400D3E10F /* TicketTableViewCell.swift */,
+				C668E89B27C30A0400D3E10F /* TicketTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,7 +178,6 @@
 				C687001627B6D9E200FA6623 /* Cells */,
 				C65AA20327B92E9000C0CE62 /* Classes */,
 				C602095D27B86D3700AD6BDF /* ViewControllers */,
-				C687001527B6D9DA00FA6623 /* Models */,
 				C687FFFE27B6B26000FA6623 /* AppDelegate.swift */,
 				C687000027B6B26000FA6623 /* SceneDelegate.swift */,
 				C687000427B6B26000FA6623 /* Main.storyboard */,
@@ -193,6 +195,8 @@
 				C697CB8927B9924700442A2A /* destinationInfo.swift */,
 				C632B66E27BFD497006D5B31 /* travelInfo.swift */,
 				C61F8AA227C192F600DDD11D /* userInfo.swift */,
+				C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */,
+				C668E8A027C3492100D3E10F /* ticketInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +281,7 @@
 			files = (
 				C687000B27B6B26200FA6623 /* Assets.xcassets in Resources */,
 				C697CB9227B9DDB200442A2A /* TravelTableViewCell.xib in Resources */,
+				C668E89D27C30A0400D3E10F /* TicketTableViewCell.xib in Resources */,
 				C632B67627C09BA9006D5B31 /* BusScreenUsersViewCell.xib in Resources */,
 				C687000627B6B26000FA6623 /* Main.storyboard in Resources */,
 			);
@@ -333,6 +338,7 @@
 			files = (
 				C61F8AA327C192F600DDD11D /* userInfo.swift in Sources */,
 				C687000927B6B26000FA6623 /* BussTicketApp.xcdatamodeld in Sources */,
+				C668E89C27C30A0400D3E10F /* TicketTableViewCell.swift in Sources */,
 				C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */,
 				C687000327B6B26000FA6623 /* ViewController.swift in Sources */,
 				C632B67527C09BA9006D5B31 /* BusScreenUsersViewCell.swift in Sources */,
@@ -342,6 +348,7 @@
 				C697CB8A27B9924700442A2A /* destinationInfo.swift in Sources */,
 				C687001827B6D9FC00FA6623 /* OnboardingCollectionViewCell.swift in Sources */,
 				C6FED6C127BBEDA300916158 /* BusScreenViewController.swift in Sources */,
+				C668E89F27C30E4100D3E10F /* TicketsViewController.swift in Sources */,
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,
 				C6FED6C827BC041D00916158 /* MockSeatCreater.swift in Sources */,
 				C632B66F27BFD497006D5B31 /* travelInfo.swift in Sources */,
@@ -353,6 +360,7 @@
 				C602095F27B86D6D00AD6BDF /* HomeScreenViewController.swift in Sources */,
 				C6FED6C427BC02F500916158 /* SeatConfig.swift in Sources */,
 				C61F8AA727C1A60900DDD11D /* UITextField+Extension.swift in Sources */,
+				C668E8A127C3492100D3E10F /* ticketInfo.swift in Sources */,
 				C632B67227C09291006D5B31 /* Notification+Extension.swift in Sources */,
 				C65AA20227B92E8B00C0CE62 /* Hour.swift in Sources */,
 			);

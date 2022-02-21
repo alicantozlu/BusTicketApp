@@ -11,8 +11,14 @@ class Ticket {
     var yolcu: Yolcu
     var tarih: Tarih
     var saat: Saat
-    var koltuk: Int
-    var koltukSayisi: Int = 0
+    var to: String
+    var from: String
+    var price: String
+    var length: String
+    var endTime: String
+    var seatNum: String
+    //var koltuk: Int
+    //var koltukSayisi: Int = 0
 
     func karsilastir(){
         // gorsel arayuz tasarlaninca gerek kalmaycak
@@ -34,11 +40,15 @@ class Ticket {
         // <AD> <SOYAD> <ID>, <GUN>/<AY>/<YIL>, <SAAT>:<DAKIKA> | <koltuk_no1> <koltuk_no2> . . .
     }
     
-    init(yolcuAdi:String,yolcuSoyadi:String,tarihGun:Int,tarihAy:Int,tarihYil:Int,saatDakika:Int,saatSaat:Int,koltuk:Int,koltukSayisi:Int){
-        self.yolcu = Yolcu(adi: yolcuAdi, soyadi: yolcuSoyadi, id: 0)
-        self.tarih = Tarih(gun: tarihGun, ay: tarihAy, yil: tarihYil)
-        self.saat = Saat(saat: saatSaat, dakika: saatDakika)
-        self.koltuk = koltuk
-        self.koltukSayisi = koltukSayisi
+    init(passengerName:String,date:String,time:String,to:String,from:String,price:String,length:String, endTime:String, seatNum:String){
+        self.yolcu = Yolcu(passengerName: passengerName)
+        self.tarih = Tarih(date: date)
+        self.saat = Saat(time: time)
+        self.to = to
+        self.from = from
+        self.price = price
+        self.length = length
+        self.endTime = endTime
+        self.seatNum = seatNum
     }
 }

@@ -29,7 +29,9 @@ class MockSeatCreater {
             let isHall = ((count - 2) % 5 == 1 || (count - 1) % 5 == 1)
             
             x = count
-            if( x >= 2 && x <= 7 ){
+            if( x == 1){
+                NewCellIdentifier = String(1)
+            } else if ( x >= 2 && x <= 7 ){
                 NewCellIdentifier = String(x - 2)
             } else if ( x >= 8 && x <= 13 ){
                 NewCellIdentifier = String(x - 4)

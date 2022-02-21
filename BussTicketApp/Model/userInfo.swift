@@ -12,5 +12,5 @@ struct UserModel{
     var nameSurname: String
     var idNumber: String
     var hesCode: String
-    var viewConfig: UIView
+    var seatNumber: String
 }

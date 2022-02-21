@@ -16,9 +16,11 @@ class HomeScreenViewController: UIViewController {
     
     var date:String = ""
     
+    static var newTicket = Ticket(passengerName: "", date: "", time: "", to: "", from: "", price: "", length: "", endTime:"", seatNum: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,39 +28,17 @@ class HomeScreenViewController: UIViewController {
         
         fromLebel.underLine()
         toLabel.underLine()
-        
-        /*underLine(label: fromLebel)
-        underLine(label: toLabel)
-*/
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        
         date = dateFormatter.string(from: Date())
-        
-        // datePicker arkaplan rengi duzenlenmesi icin
-      
-        /*datePicker.subviews.first?.subviews.forEach { grayView in
-            let view = UIView()
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.backgroundColor = UIColor(red: 0, green: 47/255, blue: 121/255, alpha: 1)
-            grayView.insertSubview(view, at: 0)
-            view.topAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.topAnchor).isActive = true
-            view.bottomAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.bottomAnchor).isActive = true
-            view.leadingAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.leadingAnchor).isActive = true
-            view.trailingAnchor.constraint(equalTo: grayView.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        }*/
-        
         
         let onboardCheck = UserDefaults.standard.bool(forKey: "Onboarded")
         if(!onboardCheck){
             UserDefaults.standard.set(true, forKey: "Onboarded")
             self.onStart()
         }
-        
-        
     }
-    
-
     
     // Nereden Nereye yazilarini yer degistir
     @IBAction func switchTextButtonAction(_ sender: Any) {
@@ -109,25 +89,16 @@ class HomeScreenViewController: UIViewController {
         }
         
         let sendVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TravelListIdentity") as! TravelListViewController
-        
         sendVC.destination1 = from
         sendVC.destination2 = to
         sendVC.date = date
-        
         sendVC.modalPresentationStyle = .fullScreen
         sendVC.modalTransitionStyle = .coverVertical
+        
+        HomeScreenViewController.newTicket.from = from
+        HomeScreenViewController.newTicket.to = to
+        HomeScreenViewController.newTicket.tarih.date = date
+        
         present(sendVC, animated: true, completion: nil)
     }
 }
-
-/*
-class ColoredDatePicker: UIDatePicker {
-    var changed = false
-    override func addSubview(_ view: UIView) {
-        if !changed {
-            changed = true
-            self.setValue(UIColor.white, forKey: "textColor")
-        }
-        super.addSubview(view)
-    }
-}*/
