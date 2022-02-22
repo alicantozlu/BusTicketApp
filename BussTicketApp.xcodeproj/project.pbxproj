@@ -16,6 +16,8 @@
 		C632B67227C09291006D5B31 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632B67127C09291006D5B31 /* Notification+Extension.swift */; };
 		C632B67527C09BA9006D5B31 /* BusScreenUsersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632B67327C09BA9006D5B31 /* BusScreenUsersViewCell.swift */; };
 		C632B67627C09BA9006D5B31 /* BusScreenUsersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C632B67427C09BA9006D5B31 /* BusScreenUsersViewCell.xib */; };
+		C633430027C46B90007DA80E /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63342FF27C46B90007DA80E /* iOSDropDown.framework */; };
+		C633430227C46DCF007DA80E /* cityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633430127C46DCF007DA80E /* cityData.swift */; };
 		C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FB27B92E6600C0CE62 /* Ticket.swift */; };
 		C65AA1FE27B92E7100C0CE62 /* Passanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FD27B92E7100C0CE62 /* Passanger.swift */; };
 		C65AA20027B92E7C00C0CE62 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65AA1FF27B92E7C00C0CE62 /* Date.swift */; };
@@ -54,6 +56,8 @@
 		C632B67127C09291006D5B31 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		C632B67327C09BA9006D5B31 /* BusScreenUsersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusScreenUsersViewCell.swift; sourceTree = "<group>"; };
 		C632B67427C09BA9006D5B31 /* BusScreenUsersViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusScreenUsersViewCell.xib; sourceTree = "<group>"; };
+		C63342FF27C46B90007DA80E /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C633430127C46DCF007DA80E /* cityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityData.swift; sourceTree = "<group>"; };
 		C65AA1FB27B92E6600C0CE62 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C65AA1FD27B92E7100C0CE62 /* Passanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passanger.swift; sourceTree = "<group>"; };
 		C65AA1FF27B92E7C00C0CE62 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C633430027C46B90007DA80E /* iOSDropDown.framework in Frameworks */,
 				B57CCBEB79E680375317C8B8 /* Pods_BussTicketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +202,7 @@
 				C61F8AA227C192F600DDD11D /* userInfo.swift */,
 				C687001927B6DA5300FA6623 /* OnboardingPagesModel.swift */,
 				C668E8A027C3492100D3E10F /* ticketInfo.swift */,
+				C633430127C46DCF007DA80E /* cityData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 		EEEA88CD37FA534F14D8E86F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C63342FF27C46B90007DA80E /* iOSDropDown.framework */,
 				16258820F22FA100022867C9 /* Pods_BussTicketApp.framework */,
 			);
 			name = Frameworks;
@@ -352,6 +359,7 @@
 				C65AA1FC27B92E6600C0CE62 /* Ticket.swift in Sources */,
 				C6FED6C827BC041D00916158 /* MockSeatCreater.swift in Sources */,
 				C632B66F27BFD497006D5B31 /* travelInfo.swift in Sources */,
+				C633430227C46DCF007DA80E /* cityData.swift in Sources */,
 				C697CB8227B9702500442A2A /* TravelListViewController.swift in Sources */,
 				C687001A27B6DA5300FA6623 /* OnboardingPagesModel.swift in Sources */,
 				C687FFFF27B6B26000FA6623 /* AppDelegate.swift in Sources */,
