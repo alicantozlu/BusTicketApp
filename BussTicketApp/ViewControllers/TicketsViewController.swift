@@ -21,7 +21,7 @@ class TicketsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(tickets)
         fromLabel.text = HomeScreenViewController.newTicket.from
         toLabel.text = HomeScreenViewController.newTicket.to
         travelStartLabel.text = HomeScreenViewController.newTicket.saat.time

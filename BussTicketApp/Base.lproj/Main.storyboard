@@ -926,6 +926,10 @@
             <point key="canvasLocation" x="3273.913043478261" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="JtA-6O-AGL"/>
+        <designable name="usT-aA-8JP"/>
+    </designables>
     <resources>
         <image name="arrow.up.arrow.down.square" catalog="system" width="128" height="114"/>
         <image name="busStation2" width="1600" height="800"/>
