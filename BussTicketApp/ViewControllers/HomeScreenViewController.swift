@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class HomeScreenViewController: UIViewController {
-    @IBOutlet var fromLebel: UITextField!
-    @IBOutlet var toLabel: UITextField!
+
+    @IBOutlet var fromLabel: DropDown!
+    @IBOutlet var toLabel: DropDown!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var switchTextButton: UIButton!
     //var delegate: MessageDelegate?
@@ -20,13 +22,16 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        let option =  Options()
+        fromLabel.optionArray = option.cities
+        toLabel.optionArray = option.cities
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        fromLebel.underLine()
+        fromLabel.underLine()
         toLabel.underLine()
 
         let dateFormatter = DateFormatter()
@@ -42,8 +47,8 @@ class HomeScreenViewController: UIViewController {
     
     // Nereden Nereye yazilarini yer degistir
     @IBAction func switchTextButtonAction(_ sender: Any) {
-        let temp = fromLebel.text
-        fromLebel.text = toLabel.text
+        let temp = fromLabel.text
+        fromLabel.text = toLabel.text
         toLabel.text = temp
     }
     
@@ -77,7 +82,7 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {
-        guard let from = fromLebel.text else { return }
+        guard let from = fromLabel.text else { return }
         guard let to = toLabel.text else { return }
         
         if(from == "" || to == ""){

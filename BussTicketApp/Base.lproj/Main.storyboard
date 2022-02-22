@@ -201,7 +201,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="İstanbul" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="47E-dX-dCk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="İstanbul" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="47E-dX-dCk" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="65" y="320" width="313" height="30"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -228,7 +228,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ankara" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYD-Oz-8fW">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ankara" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYD-Oz-8fW" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="65" y="468.5" width="313" height="30"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -383,7 +383,7 @@
                         <constraints>
                             <constraint firstItem="np6-G9-jha" firstAttribute="leading" secondItem="0En-NN-mo2" secondAttribute="leading" constant="20" id="18F-mj-eEs"/>
                             <constraint firstItem="Lhb-pt-nuU" firstAttribute="top" secondItem="LgT-gd-lg0" secondAttribute="bottom" constant="5" id="1b3-yn-JtH"/>
-                            <constraint firstItem="LYD-Oz-8fW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LgT-gd-lg0" secondAttribute="trailing" symbolic="YES" id="1fg-a4-ROu"/>
+                            <constraint firstItem="LYD-Oz-8fW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LgT-gd-lg0" secondAttribute="trailing" constant="8" symbolic="YES" id="1fg-a4-ROu"/>
                             <constraint firstItem="E8t-Oe-lm6" firstAttribute="top" secondItem="ORb-JN-VIG" secondAttribute="bottom" constant="43" id="5ha-Nz-xjg"/>
                             <constraint firstItem="0En-NN-mo2" firstAttribute="trailing" secondItem="LYD-Oz-8fW" secondAttribute="trailing" constant="36" id="68d-HJ-vUz"/>
                             <constraint firstItem="eIe-f6-Ft5" firstAttribute="top" secondItem="IXg-1a-EAp" secondAttribute="bottom" constant="10" id="AwC-Qr-Uzp"/>
@@ -424,14 +424,14 @@
                             <constraint firstItem="47E-dX-dCk" firstAttribute="top" secondItem="IZz-rD-Yjo" secondAttribute="bottom" constant="18.5" id="rSt-4q-TYN"/>
                             <constraint firstItem="ANh-0N-E7a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cin-Yk-OFC" secondAttribute="trailing" symbolic="YES" id="suY-YU-jgI"/>
                             <constraint firstItem="yBV-DL-S0v" firstAttribute="centerY" secondItem="np6-G9-jha" secondAttribute="centerY" id="xqe-za-pFl"/>
-                            <constraint firstItem="47E-dX-dCk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eV6-2l-TDk" secondAttribute="trailing" symbolic="YES" id="zpo-QX-IlO"/>
+                            <constraint firstItem="47E-dX-dCk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eV6-2l-TDk" secondAttribute="trailing" constant="8" symbolic="YES" id="zpo-QX-IlO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="eIe-f6-Ft5" id="gBn-8d-JKA"/>
-                        <outlet property="fromLebel" destination="47E-dX-dCk" id="Oj0-Ng-7sF"/>
+                        <outlet property="fromLabel" destination="47E-dX-dCk" id="wzc-Ww-d4s"/>
                         <outlet property="switchTextButton" destination="2ed-fv-IHB" id="itr-FF-hq6"/>
-                        <outlet property="toLabel" destination="LYD-Oz-8fW" id="L68-1h-k7K"/>
+                        <outlet property="toLabel" destination="LYD-Oz-8fW" id="7oX-k2-Got"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bg-O0-qNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -926,10 +926,6 @@
             <point key="canvasLocation" x="3273.913043478261" y="83.705357142857139"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="JtA-6O-AGL"/>
-        <designable name="usT-aA-8JP"/>
-    </designables>
     <resources>
         <image name="arrow.up.arrow.down.square" catalog="system" width="128" height="114"/>
         <image name="busStation2" width="1600" height="800"/>
