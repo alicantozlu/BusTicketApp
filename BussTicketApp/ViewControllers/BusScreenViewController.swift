@@ -22,21 +22,10 @@ class BusScreenViewController: UIViewController {
     var travelIndex: Int = 0
     var first = [SeatStub]()
     var selectedSeatCount:Int = 0
-    
-    @objc func changeImage(){
-        self.selectedSeatCount = dataManager.selectedSeatlist.count
-        usersTableView.reloadData()
-        if(self.selectedSeatCount == 5){
-            let alertController = UIAlertController(title: "Uyarı!", message: "Otobüs firması tek seferde en fazla 5 koltuğun satılmasına izin veriyor.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.usersTableView.rowHeight = 253
         
         let notificationCenter: NotificationCenter = .default
@@ -51,12 +40,24 @@ class BusScreenViewController: UIViewController {
         seatView.dataSource = dataManager
         
         let mock = MockSeatCreater()
+        
         first = mock.create(count: 75)
-        //let second = mock.create(count: 45)
-        dataManager.seatList = [first/*,second*/]
+        print("\(first)")
+        dataManager.seatList = [first]
         seatView?.reload()
         
         usersTableView.register(UINib(nibName: "BusScreenUsersViewCell", bundle: nil), forCellReuseIdentifier: "usersCellIdentifier")
+    }
+    
+    @objc func changeImage(){
+        self.selectedSeatCount = dataManager.selectedSeatlist.count
+        usersTableView.reloadData()
+        if(self.selectedSeatCount == 5){
+            let alertController = UIAlertController(title: "Uyarı!", message: "Otobüs firması tek seferde en fazla 5 koltuğun satılmasına izin veriyor.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     //Kaydirma animasyonu
@@ -73,6 +74,8 @@ class BusScreenViewController: UIViewController {
     }
     
     @IBAction func buyButtonAction(_ sender: Any) {
+        
+        // Secilmemis koltuk alert
         if dataManager.selectedSeatlist.isEmpty{
             let alertController = UIAlertController(title: "Uyarı!", message: "Lütfen koltuk seçiniz.", preferredStyle: .alert)
             let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
@@ -81,6 +84,7 @@ class BusScreenViewController: UIViewController {
             return
         }
         
+        // Kullanici bilgisinin biletlere kayit edilmesi
         var ticketsTemp = [UserModel]()
         for i in 0...dataManager.selectedSeatlist.count-1{
              //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
@@ -91,7 +95,13 @@ class BusScreenViewController: UIViewController {
             let userHES = cell.hesCodeTextField.text!
             let userSeatNum = String(dataManager.selectedSeatlist[i].cellIdentifier)
             ticketsTemp.append(UserModel(nameSurname: userName, idNumber: userID, hesCode: userHES, seatNumber: userSeatNum))
+            
+            // Satilan koltuk icin deger duzenlenmesi
+            HomeScreenViewController.reservedSeats[dataManager.selectedSeatlist[i].number-1].salable = false
+            HomeScreenViewController.reservedSeats[dataManager.selectedSeatlist[i].number-1].gender = dataManager.selectedSeatlist[i].gender
         }
+        
+        //Ekran yonlendirmesi veri aktarimi
         let ticketVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ticketVcIdentifier") as! TicketsViewController
         ticketVC.tickets = ticketsTemp
         ticketVC.modalTransitionStyle = .crossDissolve
@@ -99,6 +109,7 @@ class BusScreenViewController: UIViewController {
         present(ticketVC, animated: true, completion: nil)
     }
     
+    //Sefer Liste ekranina don
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

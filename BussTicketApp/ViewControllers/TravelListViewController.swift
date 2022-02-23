@@ -31,7 +31,6 @@ class TravelListViewController: UIViewController {
         for i in 0...travels.count-1{
             destinations.append(DestinationModel(destination1: destination1, destination2: destination2, date: date, travelModel: travels[i]))
         }
-       
         travelListTableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
     }
     
@@ -40,7 +39,6 @@ class TravelListViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         HomeScreenViewController.newTicket.saat.time = destinations[indexPath.row].travelModel?.time! ?? "-"
         HomeScreenViewController.newTicket.endTime = destinations[indexPath.row].travelModel?.endTime! ?? "-"
         HomeScreenViewController.newTicket.length = destinations[indexPath.row].travelModel?.travelTime! ?? "-"

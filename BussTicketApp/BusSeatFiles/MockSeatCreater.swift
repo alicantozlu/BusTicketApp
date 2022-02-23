@@ -19,6 +19,8 @@ struct SeatStub {
 class MockSeatCreater {
     
     var x:Int = 0
+    //var passengerArr = [PassengerInfo]()
+    
     func create(count: Int) -> [SeatStub] {
         
         // 3 8 13 18 23 28 33 38 43 48 53 58
@@ -80,12 +82,12 @@ class MockSeatCreater {
             let stub = SeatStub(
                 id: UUID().uuidString,
                 number: count,
-                salable: Bool.random(),
-                gender: Bool.random(),
+                salable: HomeScreenViewController.reservedSeats[count-1].salable, //true, //passengerArr[count-1].salable, //Bool.random(),
+                gender: HomeScreenViewController.reservedSeats[count-1].gender, //true, //passengerArr[count-1].gender, //Bool.random(),
                 hall: isHall,
                 cellIdentifier: NewCellIdentifier)
         
-            
+            /*
             // 2li koltuklarda tekli oturmalarin onune gecmek icin
             if(list.count > 1 && list.count % 5 == 0){
                 //print("\(list) \n")
@@ -95,7 +97,9 @@ class MockSeatCreater {
                     list[list.count-1].salable = true
                 }
             }
-
+            */
+            
+            
             list.append(stub)
         }
         return list

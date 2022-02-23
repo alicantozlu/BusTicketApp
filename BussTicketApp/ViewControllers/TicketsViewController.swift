@@ -35,7 +35,12 @@ class TicketsViewController: UIViewController {
         ticketTableView.register(UINib(nibName: "TicketTableViewCell", bundle: nil), forCellReuseIdentifier: "ticketCell")
     }
     @IBAction func goBackAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
+        
+        let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeScreenIdentity") as! HomeScreenViewController
+        homeScreenVC.modalPresentationStyle = .fullScreen
+        homeScreenVC.modalTransitionStyle = .flipHorizontal
+        present(homeScreenVC, animated: true, completion: nil)
     }
 }
 

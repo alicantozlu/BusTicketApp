@@ -170,7 +170,7 @@
         <!--Home Screen View Controller-->
         <scene sceneID="0xr-gV-EVj">
             <objects>
-                <viewController id="uV2-RN-Qtd" customClass="HomeScreenViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeScreenIdentity" id="uV2-RN-Qtd" customClass="HomeScreenViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAz-cz-m4Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -868,7 +868,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Go Back">
+                                <buttonConfiguration key="configuration" style="tinted" title="Go Home">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>

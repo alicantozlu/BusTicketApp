@@ -18,10 +18,18 @@ class HomeScreenViewController: UIViewController {
     
     var date:String = ""
     
+    static var reservedSeats = [PassengerInfo]()
+    
     static var newTicket = Ticket(passengerName: "", date: "", time: "", to: "", from: "", price: "", length: "", endTime:"", seatNum: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var x = 1
+        if (x == 1){
+            let temp = PassengerInfo(salable: true, gender: true)
+            HomeScreenViewController.reservedSeats.append(contentsOf: repeatElement(temp, count: 75))
+            x += 1
+        }
         
         let option =  Options()
         fromLabel.optionArray = option.cities
