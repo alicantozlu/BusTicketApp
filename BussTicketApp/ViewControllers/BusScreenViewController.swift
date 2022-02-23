@@ -90,7 +90,10 @@ class BusScreenViewController: UIViewController {
         
         
         var ticketsTemp = [UserModel]()
-        /*for i in 0...dataManager.selectedSeatlist.count-1{
+       
+        
+        
+        for i in 0...dataManager.selectedSeatlist.count-1{
             //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
             let ndx = IndexPath(row:(i), section: 0)
             let cell = ticketListCollectionView.cellForRow(at:ndx) as! BusScreenUsersViewCell
@@ -99,7 +102,12 @@ class BusScreenViewController: UIViewController {
             let userHES = cell.hesCodeTextField.text!
             let userSeatNum = String(dataManager.selectedSeatlist[i].cellIdentifier)
             ticketsTemp.append(UserModel(nameSurname: userName, idNumber: userID, hesCode: userHES, seatNumber: userSeatNum))
-        }*/
+        }
+        
+        
+        
+        
+        
         let ticketVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ticketVcIdentifier") as! TicketsViewController
         ticketVC.tickets = ticketsTemp
         ticketVC.modalTransitionStyle = .crossDissolve
