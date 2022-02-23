@@ -752,7 +752,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VoZ-yx-x9d">
-                                <rect key="frame" x="127" y="89.5" width="160" height="35"/>
+                                <rect key="frame" x="127" y="73" width="160" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3D-xp-z3W">
                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="35"/>
@@ -828,7 +828,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hq4-Ox-fI9">
                                 <rect key="frame" x="163.5" y="45" width="87.5" height="25"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72R-ho-Kh4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72R-ho-Kh4">
                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Z5h-6R-0pO"/>
@@ -882,11 +882,11 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a3o-9r-bs8">
-                                <rect key="frame" x="0.0" y="133" width="414" height="640"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="640" id="bAm-W9-ChT"/>
-                                    <constraint firstAttribute="height" constant="640" id="nv8-s0-NZx"/>
+                                    <constraint firstAttribute="height" constant="651" id="nv8-s0-NZx"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.85938316579999996" green="0.97257417440000005" blue="0.99807196860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -904,12 +904,12 @@
                             <constraint firstItem="Gtf-hz-OJg" firstAttribute="leading" secondItem="2RN-cv-eui" secondAttribute="leading" id="RXk-Bi-CpG"/>
                             <constraint firstAttribute="bottom" secondItem="Gtf-hz-OJg" secondAttribute="bottom" id="VsQ-NA-X4W"/>
                             <constraint firstItem="Gtf-hz-OJg" firstAttribute="trailing" secondItem="2RN-cv-eui" secondAttribute="trailing" id="bW5-C9-YDa"/>
-                            <constraint firstItem="VoZ-yx-x9d" firstAttribute="top" secondItem="hq4-Ox-fI9" secondAttribute="bottom" constant="19.5" id="btM-NT-ljY"/>
+                            <constraint firstItem="VoZ-yx-x9d" firstAttribute="top" secondItem="hq4-Ox-fI9" secondAttribute="bottom" constant="3" id="btM-NT-ljY"/>
                             <constraint firstItem="VoZ-yx-x9d" firstAttribute="centerX" secondItem="Yew-sV-Nrr" secondAttribute="centerX" id="fha-TU-siv"/>
                             <constraint firstItem="a3o-9r-bs8" firstAttribute="trailing" secondItem="2RN-cv-eui" secondAttribute="trailing" id="idD-UO-csw"/>
                             <constraint firstItem="hq4-Ox-fI9" firstAttribute="top" secondItem="2RN-cv-eui" secondAttribute="top" constant="1" id="k9w-Zy-GlK"/>
                             <constraint firstItem="2RN-cv-eui" firstAttribute="bottom" secondItem="D7j-Fv-cvK" secondAttribute="bottom" constant="31" id="kFT-kS-Euh"/>
-                            <constraint firstItem="a3o-9r-bs8" firstAttribute="top" secondItem="VoZ-yx-x9d" secondAttribute="bottom" constant="8.5" id="lhX-Dc-8oE"/>
+                            <constraint firstItem="a3o-9r-bs8" firstAttribute="top" secondItem="VoZ-yx-x9d" secondAttribute="bottom" constant="-2" id="lhX-Dc-8oE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -926,6 +926,10 @@
             <point key="canvasLocation" x="3273.913043478261" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="JtA-6O-AGL"/>
+        <designable name="usT-aA-8JP"/>
+    </designables>
     <resources>
         <image name="arrow.up.arrow.down.square" catalog="system" width="128" height="114"/>
         <image name="busStation2" width="1600" height="800"/>

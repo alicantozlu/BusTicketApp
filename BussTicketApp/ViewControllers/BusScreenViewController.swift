@@ -84,7 +84,7 @@ class BusScreenViewController: UIViewController {
         var ticketsTemp = [UserModel]()
         for i in 0...dataManager.selectedSeatlist.count-1{
              //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
-            let ndx = IndexPath(row:(i), section: 0)
+            let ndx = IndexPath(row:(0), section: 0)
             let cell = ticketListCollectionView.cellForRow(at:ndx) as! BusScreenUsersViewCell
             let userName = cell.nameSurnameTextField.text!
             let userID = cell.idNoTextField.text!
@@ -106,7 +106,7 @@ class BusScreenViewController: UIViewController {
 
 extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.selectedSeatCount
+        return 1//self.selectedSeatCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -114,7 +114,7 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
         cell.hesCodeTextField.borderStyle = UITextField.BorderStyle.none
-        cell.seatNumberLabel.text = String(dataManager.selectedSeatlist[indexPath.row].cellIdentifier)
+        cell.seatNumberLabel.text = ""// String(dataManager.selectedSeatlist[indexPath.row].cellIdentifier)
         return cell
     }
 }
