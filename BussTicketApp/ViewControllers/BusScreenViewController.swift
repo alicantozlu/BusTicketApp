@@ -10,7 +10,7 @@ import ALBusSeatView
 import Lottie
 
 class BusScreenViewController: UIViewController {
-
+    
     @IBOutlet var goBackButton: UIButton!
     @IBOutlet var seatView: ALBusSeatView!
     @IBOutlet var buyButton: UIButton!
@@ -22,6 +22,10 @@ class BusScreenViewController: UIViewController {
     var travelIndex: Int = 0
     var first = [SeatStub]()
     var selectedSeatCount:Int = 0
+    static var users = [UserModel]()
+    
+    
+    var allCellsText = [String]()
     
     @objc func changeImage(){
         self.selectedSeatCount = dataManager.selectedSeatlist.count
@@ -81,9 +85,13 @@ class BusScreenViewController: UIViewController {
             return
         }
         
+        
+        print("\(BusScreenViewController.users)")
+        
+        
         var ticketsTemp = [UserModel]()
-        for i in 0...dataManager.selectedSeatlist.count-1{
-             //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
+        /*for i in 0...dataManager.selectedSeatlist.count-1{
+            //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
             let ndx = IndexPath(row:(i), section: 0)
             let cell = ticketListCollectionView.cellForRow(at:ndx) as! BusScreenUsersViewCell
             let userName = cell.nameSurnameTextField.text!
@@ -91,13 +99,14 @@ class BusScreenViewController: UIViewController {
             let userHES = cell.hesCodeTextField.text!
             let userSeatNum = String(dataManager.selectedSeatlist[i].cellIdentifier)
             ticketsTemp.append(UserModel(nameSurname: userName, idNumber: userID, hesCode: userHES, seatNumber: userSeatNum))
-        }
+        }*/
         let ticketVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ticketVcIdentifier") as! TicketsViewController
         ticketVC.tickets = ticketsTemp
         ticketVC.modalTransitionStyle = .crossDissolve
         ticketVC.modalPresentationStyle = .fullScreen
-        present(ticketVC, animated: true, completion: nil)
+        //present(ticketVC, animated: true, completion: nil)
     }
+    
     
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -105,16 +114,30 @@ class BusScreenViewController: UIViewController {
 }
 
 extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
+        
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        allCellsText.append(textField.text!)
+        print(allCellsText)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.selectedSeatCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("-* \(self.selectedSeatCount)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! BusScreenUsersViewCell
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
         cell.hesCodeTextField.borderStyle = UITextField.BorderStyle.none
         cell.seatNumberLabel.text = String(dataManager.selectedSeatlist[indexPath.row].cellIdentifier)
+        
+        //cell.user =
+        /*cell.idNoTextField.delegate = self
+        cell.nameSurnameTextField.delegate = self
+        cell.hesCodeTextField.delegate = self*/
+
+        //print("------------------------ \n\(indexPath.row)")
         return cell
     }
 }
