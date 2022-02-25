@@ -53,10 +53,13 @@ class BusScreenViewController: UIViewController {
         self.selectedSeatCount = dataManager.selectedSeatlist.count
         usersTableView.reloadData()
         if(self.selectedSeatCount == 5){
-            let alertController = UIAlertController(title: "Uyarı!", message: "Otobüs firması tek seferde en fazla 5 koltuğun satılmasına izin veriyor.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
+            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            myAlert.textMessage = "Otobüs firması tek seferde en fazla 5 koltuğun satılmasına izin veriyor."
+            self.present(myAlert, animated: true, completion: nil)
+            return
         }
     }
     

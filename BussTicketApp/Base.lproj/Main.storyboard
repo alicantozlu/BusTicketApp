@@ -471,8 +471,8 @@
                                                         <action selector="okeyBtnAction:" destination="9gW-Ck-Igh" eventType="touchUpInside" id="7fW-R5-f7x"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lüften boş alanları doldurunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-XW-VDI">
-                                                    <rect key="frame" x="35" y="45" width="250" height="38"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-XW-VDI">
+                                                    <rect key="frame" x="35" y="45" width="250" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="250" id="4Mt-D4-qj7"/>
                                                     </constraints>
