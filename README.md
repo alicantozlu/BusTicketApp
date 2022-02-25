@@ -1,4 +1,4 @@
-<p align="center"><h1>BusTicketApp</h1></p>
+<h1 align="center">BusTicketApp</h1>
 
 <h2>Onboarding Screen</h2>
 <p align="center">
