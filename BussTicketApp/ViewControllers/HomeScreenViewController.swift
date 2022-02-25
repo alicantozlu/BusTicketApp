@@ -94,10 +94,11 @@ class HomeScreenViewController: UIViewController {
         guard let to = toLabel.text else { return }
         
         if(from == "" || to == ""){
-            let alertController = UIAlertController(title: "Hata!", message: "Lütfen boş yerleri doldurunuz.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
+            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(myAlert, animated: true, completion: nil)
             return
         }
         

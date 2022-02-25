@@ -422,7 +422,7 @@
                             <constraint firstItem="zWr-tj-FOr" firstAttribute="leading" secondItem="CAz-cz-m4Q" secondAttribute="leadingMargin" constant="-20" id="qVw-y8-FOw"/>
                             <constraint firstItem="0En-NN-mo2" firstAttribute="trailing" secondItem="ORb-JN-VIG" secondAttribute="trailing" constant="20" id="r1x-ka-xVL"/>
                             <constraint firstItem="47E-dX-dCk" firstAttribute="top" secondItem="IZz-rD-Yjo" secondAttribute="bottom" constant="18.5" id="rSt-4q-TYN"/>
-                            <constraint firstItem="ANh-0N-E7a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cin-Yk-OFC" secondAttribute="trailing" symbolic="YES" id="suY-YU-jgI"/>
+                            <constraint firstItem="ANh-0N-E7a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cin-Yk-OFC" secondAttribute="trailing" constant="8" symbolic="YES" id="suY-YU-jgI"/>
                             <constraint firstItem="yBV-DL-S0v" firstAttribute="centerY" secondItem="np6-G9-jha" secondAttribute="centerY" id="xqe-za-pFl"/>
                             <constraint firstItem="47E-dX-dCk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eV6-2l-TDk" secondAttribute="trailing" constant="8" symbolic="YES" id="zpo-QX-IlO"/>
                         </constraints>
@@ -437,6 +437,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bg-O0-qNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="83.705357142857139"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="UhH-zJ-MSC">
+            <objects>
+                <viewController storyboardIdentifier="alertIdentity" id="9gW-Ck-Igh" customClass="AlertViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUz-56-PDH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9D-fv-cK3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="909"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RWx-UN-KG8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="909"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tih-t1-0rY">
+                                            <rect key="frame" x="47" y="371.5" width="320" height="166"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-BO-38S">
+                                                    <rect key="frame" x="0.0" y="116" width="320" height="50"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.1215298101" blue="0.35507595539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ZUt-eA-kiy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Tamam">
+                                                        <color key="titleColor" red="0.85938316579999996" green="0.97257417440000005" blue="0.99807196860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="okeyBtnAction:" destination="9gW-Ck-Igh" eventType="touchUpInside" id="7fW-R5-f7x"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lüften boş alanları doldurunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-XW-VDI">
+                                                    <rect key="frame" x="35" y="45" width="250" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="4Mt-D4-qj7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.1215298101" blue="0.35507595539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Vh0-BO-38S" secondAttribute="trailing" id="0iS-oT-vHg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vh0-BO-38S" secondAttribute="bottom" id="FGB-Ms-Rf9"/>
+                                                <constraint firstAttribute="height" constant="166" id="SVU-RP-h18"/>
+                                                <constraint firstItem="Vh0-BO-38S" firstAttribute="leading" secondItem="Tih-t1-0rY" secondAttribute="leading" id="XkV-wu-aNf"/>
+                                                <constraint firstAttribute="width" constant="320" id="f3h-0c-NyW"/>
+                                                <constraint firstItem="e0R-XW-VDI" firstAttribute="top" secondItem="Tih-t1-0rY" secondAttribute="top" constant="45" id="gPz-Ur-qua"/>
+                                                <constraint firstItem="e0R-XW-VDI" firstAttribute="centerX" secondItem="Tih-t1-0rY" secondAttribute="centerX" id="oun-Of-90a"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9j-R7-Ye2">
+                                            <rect key="frame" x="172" y="316" width="70" height="70"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4rs-Dz-Jdc">
+                                                    <rect key="frame" x="0.0" y="-1" width="70" height="71.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.0" green="0.1215298101" blue="0.35507595539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="UXx-2L-VEu"/>
+                                                <constraint firstAttribute="height" constant="70" id="WFv-2Q-IKs"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="H9j-R7-Ye2" secondAttribute="bottom" constant="523" id="1F7-uq-pwc"/>
+                                        <constraint firstItem="Tih-t1-0rY" firstAttribute="centerY" secondItem="RWx-UN-KG8" secondAttribute="centerY" id="JMz-1T-OSb"/>
+                                        <constraint firstItem="Tih-t1-0rY" firstAttribute="centerX" secondItem="RWx-UN-KG8" secondAttribute="centerX" id="Pig-A5-57z"/>
+                                        <constraint firstItem="H9j-R7-Ye2" firstAttribute="centerX" secondItem="RWx-UN-KG8" secondAttribute="centerX" id="aGt-Vs-L1w"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.43454525170736757" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KyV-rl-uni"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="busImageContainerView" destination="H9j-R7-Ye2" id="GpF-H1-KPd"/>
+                        <outlet property="containerView" destination="Tih-t1-0rY" id="ifQ-Kj-6Kw"/>
+                        <outlet property="okeyButton" destination="Vh0-BO-38S" id="IkO-D1-7kV"/>
+                        <outlet property="uyariLabel" destination="e0R-XW-VDI" id="wjo-XD-U8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOD-Z7-gaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="746.65178571428567"/>
         </scene>
         <!--Travel List View Controller-->
         <scene sceneID="XNw-Jf-3QO">
@@ -932,6 +1027,7 @@
     </designables>
     <resources>
         <image name="arrow.up.arrow.down.square" catalog="system" width="128" height="114"/>
+        <image name="bus.fill" catalog="system" width="128" height="122"/>
         <image name="busStation2" width="1600" height="800"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="cityEdited" width="910" height="599"/>

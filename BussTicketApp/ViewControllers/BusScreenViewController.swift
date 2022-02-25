@@ -74,13 +74,17 @@ class BusScreenViewController: UIViewController {
     }
     
     @IBAction func buyButtonAction(_ sender: Any) {
-        
-        // Secilmemis koltuk alert
-        if dataManager.selectedSeatlist.isEmpty{
-            let alertController = UIAlertController(title: "Uyarı!", message: "Lütfen koltuk seçiniz.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Tamam", style: .default, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+
+        // Secilmemis koltuk ve kullanici bilgisi
+        let ndx1 = IndexPath(row:(0), section: 0)
+        let cell1 = ticketListCollectionView.cellForRow(at:ndx1) as! BusScreenUsersViewCell
+        if (dataManager.selectedSeatlist.isEmpty || cell1.nameSurnameTextField.text!.isEmpty || cell1.idNoTextField.text!.isEmpty || cell1.hesCodeTextField.text!.isEmpty){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
+            //myAlert.uyariLabel.text = "Lüften boş alanları doldurunuz."
+            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(myAlert, animated: true, completion: nil)
             return
         }
         
