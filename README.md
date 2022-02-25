@@ -1,4 +1,4 @@
-# BusTicketApp
+<p align="center"># BusTicketApp</p>
 
 <h2>Onboarding Screen</h2>
 <p align="center">
