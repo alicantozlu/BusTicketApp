@@ -14,6 +14,8 @@ class AlertViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet var busImageContainerView: UIView!
     
+    var textMessage:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,8 @@ class AlertViewController: UIViewController {
         busImageContainerView.layer.cornerRadius = 8
         
         okeyButton.layer.cornerRadius = 8
+        
+        uyariLabel.text = textMessage
     }
 
     @IBAction func okeyBtnAction(_ sender: Any) {

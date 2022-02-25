@@ -98,6 +98,9 @@ class HomeScreenViewController: UIViewController {
             let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
             myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            
+            myAlert.textMessage = "Lüften boş alanları doldurunuz."
+            
             self.present(myAlert, animated: true, completion: nil)
             return
         }

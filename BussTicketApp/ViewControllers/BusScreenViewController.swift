@@ -75,15 +75,25 @@ class BusScreenViewController: UIViewController {
     
     @IBAction func buyButtonAction(_ sender: Any) {
 
-        // Secilmemis koltuk ve kullanici bilgisi
-        let ndx1 = IndexPath(row:(0), section: 0)
-        let cell1 = ticketListCollectionView.cellForRow(at:ndx1) as! BusScreenUsersViewCell
-        if (dataManager.selectedSeatlist.isEmpty || cell1.nameSurnameTextField.text!.isEmpty || cell1.idNoTextField.text!.isEmpty || cell1.hesCodeTextField.text!.isEmpty){
+        if (dataManager.selectedSeatlist.isEmpty){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
-            //myAlert.uyariLabel.text = "Lüften boş alanları doldurunuz."
             myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            myAlert.textMessage = "Lüften koltuk seçiniz."
+            self.present(myAlert, animated: true, completion: nil)
+            return
+        }
+        
+        // Bos kullanici bilgisi
+        let ndx1 = IndexPath(row:(0), section: 0)
+        let cell1 = ticketListCollectionView.cellForRow(at:ndx1) as! BusScreenUsersViewCell
+        if (cell1.nameSurnameTextField.text!.isEmpty || cell1.idNoTextField.text!.isEmpty || cell1.hesCodeTextField.text!.isEmpty){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
+            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            myAlert.textMessage = "Lüften boş alanları doldurunuz."
             self.present(myAlert, animated: true, completion: nil)
             return
         }
